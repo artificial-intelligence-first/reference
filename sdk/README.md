@@ -44,9 +44,9 @@ The `sdk/` directory captures three complementary ways to build with OpenAI toda
 
 ## Documentation Map
 
-- **[AGENT-KIT.md](AGENT-KIT.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
-- **[AGENTS-SDK.md](AGENTS-SDK.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
-- **[CODEX-SDK.md](CODEX-SDK.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
+- **[Agent_Kit.md](Agent_Kit.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
+- **[Agents_SDK.md](Agents_SDK.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
+- **[Codex-SDK.md](Codex-SDK.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
 
 Each guide flags historical content with “Legacy” callouts and links back to the official platform documentation.
 
@@ -154,12 +154,12 @@ OPENAI_API_KEY=sk-your-key
 OPENAI_API_BASE=https://api.openai.com/v1  # default
 ```
 
-AgentKit-specific tooling (if you adopt a community framework) will include additional dependencies such as Redis clients or vector stores—see `AGENT-KIT.md` for “Sample” configuration tables.
+AgentKit-specific tooling (if you adopt a community framework) will include additional dependencies such as Redis clients or vector stores—see `Agent_Kit.md` for “Sample” configuration tables.
 
 ## Integration with markdown-file/ Guides
 
-- **AGENTS.md** – update the “Dev Environment / Testing / PR Instructions” sections with the commands from `AGENTS-SDK.md`.
-- **SSOT.md** – record canonical SDK versions, approved models, and safety policies established in `AGENT-KIT.md`.
+- **AGENTS.md** – update the “Dev Environment / Testing / PR Instructions” sections with the commands from `Agents_SDK.md`.
+- **SSOT.md** – record canonical SDK versions, approved models, and safety policies established in `Agent_Kit.md`.
 - **PLANS.md** – when executing ExecPlans involving SDK integrations, reference validation steps defined in the relevant SDK guide.
 - **SKILL.md** – if packaging Skills around these SDKs, ensure triggers point to the latest API names (`Responses API`, `Tool calling`) instead of legacy “Codex”.
 
@@ -181,13 +181,13 @@ AgentKit-specific tooling (if you adopt a community framework) will include addi
 - [OpenAI Python SDK](https://github.com/openai/openai-python)
 - [OpenAI Node.js SDK](https://github.com/openai/openai-node)
 
-Historical Codex documentation is linked in `CODEX-SDK.md` with deprecation notices.
+Historical Codex documentation is linked in `Codex-SDK.md` with deprecation notices.
 
 ## Adoption Checklist
 
 - [ ] Confirm organisational policy for model usage (record in SSOT.md).
 - [ ] Install the latest OpenAI SDKs and run health checks (`python -m openai health-check` / `npx openai health-check`).
-- [ ] Prototype workflows in staging using the `AGENTS-SDK.md` examples.
+- [ ] Prototype workflows in staging using the `Agents_SDK.md` examples.
 - [ ] If using conceptual AgentKit patterns, adapt them to your internal frameworks and annotate differences.
 - [ ] Define validation and rollback procedures in project ExecPlans (`PLANS.md`).
 - [ ] Update AGENTS.md with testing commands, linting, and deployment steps.

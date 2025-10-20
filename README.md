@@ -31,13 +31,13 @@ Version history and changes to this repository.
 
 ### SDK & Framework Guides (sdk/)
 
-#### [OpenAI AgentKit (Conceptual)](sdk/AGENT-KIT.md)
+#### [OpenAI AgentKit (Conceptual)](sdk/Agent_Kit.md)
 Conceptual, higher-level scaffold for autonomous agents. Examples are illustrative—validate against the latest OpenAI releases.
 
-#### [OpenAI Agents API (Low-Level)](sdk/AGENTS-SDK.md)
+#### [OpenAI Agents API (Low-Level)](sdk/Agents_SDK.md)
 Practical guidance for orchestrating agents with OpenAI’s current Python/TypeScript SDKs and the Responses API.
 
-#### [OpenAI Code Generation](sdk/CODEX-SDK.md)
+#### [OpenAI Code Generation](sdk/Codex-SDK.md)
 Modern code-generation patterns using the Responses API (Codex legacy behaviour is described as historical context only).
 
 **See [sdk/README.md](sdk/README.md)** for SDK comparison, integration patterns, and decision guide. Always cross-check with the official OpenAI documentation before implementation.
@@ -87,9 +87,9 @@ reference/
 │   └── SSOT.md            # Single Source of Truth principles guide
 └── sdk/                   # OpenAI SDK and framework documentation
     ├── README.md          # SDK overview, comparison, and integration patterns
-    ├── AGENT-KIT.md       # OpenAI AgentKit framework guide
-    ├── AGENTS-SDK.md      # OpenAI Agents SDK reference
-    └── CODEX-SDK.md       # OpenAI Codex SDK guide
+    ├── Agent_Kit.md       # OpenAI AgentKit framework guide (conceptual)
+    ├── Agents_SDK.md      # OpenAI Agents SDK reference
+    └── Codex-SDK.md       # OpenAI code generation guide
 ```
 
 **Note for Implementation**: While these guides recommend placing files like `AGENTS.md` and `SSOT.md` at your project root, this reference repository organizes them into directories for easier navigation. When adopting these conventions in your own projects, follow the placement recommendations within each guide.
