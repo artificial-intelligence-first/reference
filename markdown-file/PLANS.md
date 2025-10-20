@@ -490,10 +490,10 @@ This ExecPlan is a living document. Keep Progress, Surprises & Discoveries, Deci
 
 ## Update Log
 
-- 2025-10-20: 初版を公開（コミュニティ事例とOpenAI CookbookのExecPlan記事を要約）
+- 2025-10-20: Published the initial edition (summarizing community examples and the OpenAI Cookbook ExecPlan article).
 
 ---
 
-<a name="footnote-openai-cookbook">1</a>: 参考: [OpenAI Cookbook – Exec Plans](https://cookbook.openai.com/articles/codex_exec_plans)
+<a name="footnote-openai-cookbook">1</a>: Reference: [OpenAI Cookbook – Exec Plans](https://cookbook.openai.com/articles/codex_exec_plans)
 
 **Remember**: ExecPlans exist to maintain clarity and continuity. Update them continuously, write for both humans and agents, and keep them self-contained enough that anyone can resume the work.

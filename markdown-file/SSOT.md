@@ -180,7 +180,7 @@ This document contains canonical definitions, policies, and data contracts for t
 
 ## SSOT Workflow
 
-SSOTの更新は他のドキュメントとも連動します。用語やポリシーが変わった場合は、`AGENTS.md`の運用手順や`PLANS.md`の該当ExecPlan、`CHANGELOG.md`のユーザー向け告知も忘れずに更新してください。
+SSOT updates must stay in sync with companion documents. When terms or policies change, update the operational procedures in `AGENTS.md`, the relevant ExecPlans in `PLANS.md`, and any user-facing announcements in `CHANGELOG.md`.
 
 ### Creating New Definitions
 
@@ -559,7 +559,7 @@ tests/auth.test.ts validates this matches SSOT.md
 
 ## Update Log
 
-- 2025-10-20: 初版を公開（SSOT原則とAI支援開発の実務例を整理）
+- 2025-10-20: Published the initial edition (organized around SSOT principles and real-world AI-assisted development practices).
 
 ---
 

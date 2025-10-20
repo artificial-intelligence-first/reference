@@ -155,19 +155,19 @@ AGENTS.md typically includes sections covering:
 
 ## Tool Support
 
-### OpenAI系コード生成モデル
-最新のOpenAIコード生成モデル（例: GPT-4.1 Code、GPT-4.1 Miniなど）は、リポジトリ固有の手順を理解するためにAGENTS.mdを参照できます。利用しているモデルのドキュメントで最新の挙動を確認してください。
+### OpenAI Code Generation Models
+The latest OpenAI code generation models (e.g., GPT-4.1 Code, GPT-4.1 Mini) can rely on AGENTS.md to understand repository-specific procedures. Review each model’s documentation to confirm the most recent behavior.
 
 ### Cursor
-CursorはAGENTS.mdをプロジェクト固有のワークフローガイドとして扱います。
+Cursor treats AGENTS.md as the project-specific workflow guide.
 
-### VS Code向けAI拡張
-VS Codeで動作するAI支援拡張は、AGENTS.mdをコンテキストとして読み込む実装が増えています。
+### VS Code AI Extensions
+AI-assisted extensions for VS Code increasingly ingest AGENTS.md as contextual guidance.
 
-### カスタムエージェント
-自作エージェントではAGENTS.mdのパーサーを実装し、標準化された運用手順を継承しましょう。
+### Custom Agents
+For bespoke agents, implement an AGENTS.md parser so they inherit standard operating procedures.
 
-> **Support Note**: 対応状況は変更される可能性があるため、各ツールのリリースノートを定期的に確認してください。
+> **Support Note**: Compatibility may change—review each tool’s release notes regularly.
 
 ## Conflict Resolution
 
@@ -207,7 +207,7 @@ When guidance conflicts arise:
 
 ## Update Log
 
-- 2025-10-20: 初版を公開（コミュニティ実務と公開仕様から再構成）
+- 2025-10-20: Published the initial edition (reassembled from community practices and the public specification).
 
 ---
 

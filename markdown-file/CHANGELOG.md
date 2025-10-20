@@ -288,7 +288,7 @@ VERSION=$(grep -m1 "^## \[" CHANGELOG.md | sed 's/.*\[\(.*\)\].*/\1/')
 changelog-extract --unreleased CHANGELOG.md > release-notes.md
 ```
 
-> **Prerequisites**: `changelog-validator` や `changelog-extract` は外部ツールです。導入していない場合は、`grep` や `sed` など標準コマンドで代替してください。
+> **Prerequisites**: `changelog-validator` and `changelog-extract` are external tools. If you have not installed them, fall back to standard commands such as `grep` or `sed`.
 
 ### For Release Scripts *(Sample commands—adjust to your tooling)*
 
@@ -347,7 +347,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Update Log
 
-- 2025-10-20: 初版を公開（Keep a Changelog 1.1.0とコミュニティ運用例を整理）
+- 2025-10-20: Published the initial edition (aligned with Keep a Changelog 1.1.0 and community operating practices).
 
 ---
 

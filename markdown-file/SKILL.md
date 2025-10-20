@@ -13,7 +13,7 @@ Agent Skills are modular packages that provide AI agents with domain-specific kn
 - **Reusability** - Share domain expertise across projects and teams
 - **Specialization** - Package complex workflows (document processing, financial analysis, code generation) into accessible units
 
-**Key Innovation**: Skills deliver knowledge in三層構造—metadata（約100トークン目安）、instructions（数千トークン規模）、resources（必要に応じて無制限）—なので、エージェントは必要な情報だけを段階的に読み込みます<sup>[1](#footnote-anthropic-limits)</sup>.
+**Key Innovation**: Skills deliver knowledge in a three-layer structure—metadata (about 100 tokens), instructions (several thousand tokens), and resources (unbounded as needed)—so agents can load only the information required at each stage<sup>[1](#footnote-anthropic-limits)</sup>.
 
 ## Skill Structure
 
@@ -75,10 +75,10 @@ Main instruction document containing:
 
 ### Security Considerations
 
-- スクリプトやデータを追加する際は、APIキーや個人情報を含めない
-- 実行権限を必要最小限に制限し、実行前に`chmod`設定を確認する
-- 外部ライブラリに依存する場合はLICENSEと脆弱性情報を確認する
-- SSOT.mdのセキュリティポリシーと整合性を維持する
+- When adding scripts or data, omit API keys and personal information.
+- Restrict execution permissions to the minimum required and verify `chmod` settings before running anything.
+- If you depend on external libraries, check their licenses and vulnerability advisories.
+- Keep alignment with the security policies documented in SSOT.md.
 
 ## Progressive Disclosure Model
 
@@ -192,7 +192,7 @@ from anthropic import Anthropic
 
 client = Anthropic()
 response = client.messages.create(
-    model="claude-3-5-sonnet-latest",  # 最新バージョンはAPIドキュメントを確認
+    model="claude-3-5-sonnet-latest",  # Confirm the latest version in the API docs
     max_tokens=4096,
     tools=[{
         "type": "code_execution",
@@ -200,7 +200,7 @@ response = client.messages.create(
     }],
     messages=[...]
 )
-# NOTE: ベータフラグや追加オプションは都度ドキュメントを確認してください。
+# NOTE: Review the documentation for beta flags or additional options as they change.
 ```
 
 ### Claude Code (CLI)
@@ -550,7 +550,7 @@ description: |
 
 ## Update Log
 
-- 2025-10-20: 初版を公開（Anthropic Skillsドキュメントと公開サンプルを基に再編）
+- 2025-10-20: Published the initial edition (reorganized from Anthropic Skills documentation and public samples).
 
 ---
 
@@ -558,4 +558,4 @@ description: |
 
 ---
 
-<a name="footnote-anthropic-limits">1</a>: 参考: Anthropic公式ドキュメント「Agent Skills」の最新トークン制限を参照してください。
+<a name="footnote-anthropic-limits">1</a>: Reference: See Anthropic’s official “Agent Skills” documentation for the latest token limits.
