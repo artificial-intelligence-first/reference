@@ -12,20 +12,35 @@ This repository provides best practices, patterns, and reference documentation t
 
 ## Documentation
 
-### [AGENTS.md](markdown-file/AGENTS.md)
+### Development Conventions (markdown-file/)
+
+#### [AGENTS.md](markdown-file/AGENTS.md)
 Guidelines for leveraging AI agents, design patterns, and effective prompt engineering techniques.
 
-### [SSOT.md](markdown-file/SSOT.md)
+#### [SSOT.md](markdown-file/SSOT.md)
 Single Source of Truth principles and documentation management best practices for AI-assisted development.
 
-### [SKILL.md](markdown-file/SKILL.md)
+#### [SKILL.md](markdown-file/SKILL.md)
 Skill sets, technology stacks, and development methodologies for AI-assisted development.
 
-### [PLANS.md](markdown-file/PLANS.md)
+#### [PLANS.md](markdown-file/PLANS.md)
 Project planning, task management, and efficient development workflows using AI tools.
 
-### [CHANGELOG.md](markdown-file/CHANGELOG.md)
+#### [CHANGELOG.md](markdown-file/CHANGELOG.md)
 Version history and changes to this repository.
+
+### SDK & Framework Guides (sdk/)
+
+#### [OpenAI AgentKit (Conceptual)](sdk/AGENT-KIT.md)
+Conceptual, higher-level scaffold for autonomous agents. Examples are illustrative—validate against the latest OpenAI releases.
+
+#### [OpenAI Agents API (Low-Level)](sdk/AGENTS-SDK.md)
+Practical guidance for orchestrating agents with OpenAI’s current Python/TypeScript SDKs and the Responses API.
+
+#### [OpenAI Code Generation](sdk/CODEX-SDK.md)
+Modern code-generation patterns using the Responses API (Codex legacy behaviour is described as historical context only).
+
+**See [sdk/README.md](sdk/README.md)** for SDK comparison, integration patterns, and decision guide. Always cross-check with the official OpenAI documentation before implementation.
 
 ## When to Use Each Guide
 
@@ -64,27 +79,34 @@ These guides form an integrated system:
 ```
 reference/
 ├── README.md              # This file - repository overview and guide index
-└── markdown-file/         # Comprehensive guides for AI-first development
-    ├── AGENTS.md          # OpenAI AGENTS.md convention guide
-    ├── CHANGELOG.md       # Keep a Changelog format guide
-    ├── PLANS.md           # ExecPlans workflow guide
-    ├── SKILL.md           # Anthropic Agent Skills guide
-    └── SSOT.md            # Single Source of Truth principles guide
+├── markdown-file/         # Comprehensive guides for AI-first development
+│   ├── AGENTS.md          # OpenAI AGENTS.md convention guide
+│   ├── CHANGELOG.md       # Keep a Changelog format guide
+│   ├── PLANS.md           # ExecPlans workflow guide
+│   ├── SKILL.md           # Anthropic Agent Skills guide
+│   └── SSOT.md            # Single Source of Truth principles guide
+└── sdk/                   # OpenAI SDK and framework documentation
+    ├── README.md          # SDK overview, comparison, and integration patterns
+    ├── AGENT-KIT.md       # OpenAI AgentKit framework guide
+    ├── AGENTS-SDK.md      # OpenAI Agents SDK reference
+    └── CODEX-SDK.md       # OpenAI Codex SDK guide
 ```
 
-**Note for Implementation**: While these guides recommend placing files like `AGENTS.md` and `SSOT.md` at your project root, this reference repository stores them in `markdown-file/` for organizational purposes. When adopting these conventions in your own projects, follow the placement recommendations within each guide.
+**Note for Implementation**: While these guides recommend placing files like `AGENTS.md` and `SSOT.md` at your project root, this reference repository organizes them into directories for easier navigation. When adopting these conventions in your own projects, follow the placement recommendations within each guide.
 
 ## Quick Start
 
 **For first-time readers:**
 1. Start with [AGENTS.md](markdown-file/AGENTS.md) to understand the foundational convention
 2. Review [SSOT.md](markdown-file/SSOT.md) to learn about canonical documentation
-3. Browse other guides based on your immediate needs, adapting the sample workflows and checklists to your context
+3. Explore [sdk/README.md](sdk/README.md) if you're integrating OpenAI SDKs for agent or code generation features
+4. Browse other guides based on your immediate needs, adapting the sample workflows and checklists to your context
 
 **For AI agents:**
 1. Read all guide files to understand conventions
 2. Reference specific guides when performing relevant tasks
-3. Follow cross-document integration patterns consistently
+3. Consult SDK guides when implementing agent or code generation features
+4. Follow cross-document integration patterns consistently
 
 ## Usage
 
