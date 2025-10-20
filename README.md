@@ -42,6 +42,16 @@ Modern code-generation patterns using the Responses API (Codex legacy behaviour 
 
 **See [sdk/README.md](sdk/README.md)** for SDK comparison, integration patterns, and decision guide. Always cross-check with the official OpenAI documentation before implementation.
 
+### Engineering Guides (engineering/)
+
+#### [Context Engineering](engineering/Context.md)
+Retrieval, filtering, formatting, and monitoring strategies for high-quality context pipelines, incorporating Anthropic and DAIR.AI guidance.
+
+#### [Prompt Engineering](engineering/Prompt.md)
+Cross-vendor prompt patterns (Anthropic, Google, OpenAI) with reusable templates, constraint-first techniques, and iteration workflows.
+
+**See [engineering/README.md](engineering/README.md)** for a directory overview and integration pointers.
+
 ## When to Use Each Guide
 
 Understanding which guide to reference at different stages of your project:
@@ -56,6 +66,8 @@ Understanding which guide to reference at different stages of your project:
 - **[SKILL.md](markdown-file/SKILL.md)** - Package domain-specific expertise into reusable Skills
 - **[SSOT.md](markdown-file/SSOT.md)** - Reference for canonical definitions; update when terminology evolves
 - **[AGENTS.md](markdown-file/AGENTS.md)** - Follow for testing, linting, and PR procedures
+- **[Context.md](engineering/Context.md)** - Define retrieval architecture and context evaluation metrics
+- **[Prompt.md](engineering/Prompt.md)** - Iterate prompts and align vendor-specific prompting practices
 
 ### Completing Work
 1. **Update [CHANGELOG.md](markdown-file/CHANGELOG.md)** with user-facing changes
@@ -85,6 +97,10 @@ reference/
 │   ├── PLANS.md           # ExecPlans workflow guide
 │   ├── SKILL.md           # Anthropic Agent Skills guide
 │   └── SSOT.md            # Single Source of Truth principles guide
+├── engineering/           # Context and prompt engineering deep dives
+│   ├── README.md          # Directory overview and integration notes
+│   ├── Context.md         # Context engineering playbook
+│   └── Prompt.md          # Prompt engineering playbook
 └── sdk/                   # OpenAI SDK and framework documentation
     ├── README.md          # SDK overview, comparison, and integration patterns
     ├── Agent_Kit.md       # OpenAI AgentKit framework guide (conceptual)
@@ -100,13 +116,15 @@ reference/
 1. Start with [AGENTS.md](markdown-file/AGENTS.md) to understand the foundational convention
 2. Review [SSOT.md](markdown-file/SSOT.md) to learn about canonical documentation
 3. Explore [sdk/README.md](sdk/README.md) if you're integrating OpenAI SDKs for agent or code generation features
-4. Browse other guides based on your immediate needs, adapting the sample workflows and checklists to your context
+4. Consult [engineering/README.md](engineering/README.md) when planning context or prompt strategies
+5. Browse other guides based on your immediate needs, adapting the sample workflows and checklists to your context
 
 **For AI agents:**
 1. Read all guide files to understand conventions
 2. Reference specific guides when performing relevant tasks
 3. Consult SDK guides when implementing agent or code generation features
-4. Follow cross-document integration patterns consistently
+4. Use engineering guides when designing context retrieval or prompt templates
+5. Follow cross-document integration patterns consistently
 
 ## Usage
 
