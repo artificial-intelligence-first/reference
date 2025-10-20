@@ -156,7 +156,7 @@ OPENAI_API_BASE=https://api.openai.com/v1  # default
 
 AgentKit-specific tooling (if you adopt a community framework) will include additional dependencies such as Redis clients or vector stores—see `Agent_Kit.md` for “Sample” configuration tables.
 
-## Integration with markdown-file/ Guides
+## Integration with file/ Guides
 
 - **AGENTS.md** – update the “Dev Environment / Testing / PR Instructions” sections with the commands from `Agents_SDK.md`.
 - **SSOT.md** – record canonical SDK versions, approved models, and safety policies established in `Agent_Kit.md`.

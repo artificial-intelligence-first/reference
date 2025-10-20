@@ -1,12 +1,12 @@
 # AI-First Development Conventions (Directory Guide)
 
-> **For Humans**: This index explains how to navigate the foundational governance guides stored in `markdown-file/`. Use it as a quick reminder of what each document covers and when to update it.
+> **For Humans**: This index explains how to navigate the foundational governance guides stored in `file/`. Use it as a quick reminder of what each document covers and when to update it.
 >
 > **For AI Agents**: Review this guide before touching the documents in this directory. It clarifies which file governs which behaviour so you can reference or update the right source of truth.
 
 ## Overview
 
-The `markdown-file/` directory contains five core specifications that govern AI-first development projects:
+The `file/` directory contains five core specifications that govern AI-first development projects:
 
 1. **AGENTS.md** – Operational procedures and commands for contributors and AI agents.
 2. **CHANGELOG.md** – Keep a Changelog format reference for communicating releases.

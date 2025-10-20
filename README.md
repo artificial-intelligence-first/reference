@@ -12,21 +12,21 @@ This repository provides best practices, patterns, and reference documentation t
 
 ## Documentation
 
-### Development Conventions (markdown-file/)
+### Development Conventions (file/)
 
-#### [AGENTS.md](markdown-file/AGENTS.md)
+#### [AGENTS.md](file/AGENTS.md)
 Guidelines for leveraging AI agents, design patterns, and effective prompt engineering techniques.
 
-#### [SSOT.md](markdown-file/SSOT.md)
+#### [SSOT.md](file/SSOT.md)
 Single Source of Truth principles and documentation management best practices for AI-assisted development.
 
-#### [SKILL.md](markdown-file/SKILL.md)
+#### [SKILL.md](file/SKILL.md)
 Skill sets, technology stacks, and development methodologies for AI-assisted development.
 
-#### [PLANS.md](markdown-file/PLANS.md)
+#### [PLANS.md](file/PLANS.md)
 Project planning, task management, and efficient development workflows using AI tools.
 
-#### [CHANGELOG.md](markdown-file/CHANGELOG.md)
+#### [CHANGELOG.md](file/CHANGELOG.md)
 Version history and changes to this repository.
 
 ### SDK & Framework Guides (sdk/)
@@ -57,22 +57,22 @@ Cross-vendor prompt patterns (Anthropic, Google, OpenAI) with reusable templates
 Understanding which guide to reference at different stages of your project:
 
 ### Starting a New Project
-1. **Read [AGENTS.md](markdown-file/AGENTS.md)** first to set up your project's operational documentation
-2. **Create [SSOT.md](markdown-file/SSOT.md)** to establish canonical definitions and data contracts
-3. **Initialize [CHANGELOG.md](markdown-file/CHANGELOG.md)** to track project evolution
+1. **Read [AGENTS.md](file/AGENTS.md)** first to set up your project's operational documentation
+2. **Create [SSOT.md](file/SSOT.md)** to establish canonical definitions and data contracts
+3. **Initialize [CHANGELOG.md](file/CHANGELOG.md)** to track project evolution
 
 ### During Development
-- **[PLANS.md](markdown-file/PLANS.md)** - Create an ExecPlan for any multi-hour task or complex feature
-- **[SKILL.md](markdown-file/SKILL.md)** - Package domain-specific expertise into reusable Skills
-- **[SSOT.md](markdown-file/SSOT.md)** - Reference for canonical definitions; update when terminology evolves
-- **[AGENTS.md](markdown-file/AGENTS.md)** - Follow for testing, linting, and PR procedures
+- **[PLANS.md](file/PLANS.md)** - Create an ExecPlan for any multi-hour task or complex feature
+- **[SKILL.md](file/SKILL.md)** - Package domain-specific expertise into reusable Skills
+- **[SSOT.md](file/SSOT.md)** - Reference for canonical definitions; update when terminology evolves
+- **[AGENTS.md](file/AGENTS.md)** - Follow for testing, linting, and PR procedures
 - **[Context.md](engineering/Context.md)** - Define retrieval architecture and context evaluation metrics
 - **[Prompt.md](engineering/Prompt.md)** - Iterate prompts and align vendor-specific prompting practices
 
 ### Completing Work
-1. **Update [CHANGELOG.md](markdown-file/CHANGELOG.md)** with user-facing changes
-2. **Close [PLANS.md](markdown-file/PLANS.md)** ExecPlan with retrospective
-3. **Update [SSOT.md](markdown-file/SSOT.md)** if new definitions were introduced
+1. **Update [CHANGELOG.md](file/CHANGELOG.md)** with user-facing changes
+2. **Close [PLANS.md](file/PLANS.md)** ExecPlan with retrospective
+3. **Update [SSOT.md](file/SSOT.md)** if new definitions were introduced
 
 ## How These Documents Work Together
 
@@ -91,7 +91,7 @@ These guides form an integrated system:
 ```
 reference/
 ├── README.md              # This file - repository overview and guide index
-├── markdown-file/         # Comprehensive guides for AI-first development
+├── file/                  # Comprehensive guides for AI-first development
 │   ├── AGENTS.md          # OpenAI AGENTS.md convention guide
 │   ├── CHANGELOG.md       # Keep a Changelog format guide
 │   ├── PLANS.md           # ExecPlans workflow guide
@@ -113,8 +113,8 @@ reference/
 ## Quick Start
 
 **For first-time readers:**
-1. Start with [AGENTS.md](markdown-file/AGENTS.md) to understand the foundational convention
-2. Review [SSOT.md](markdown-file/SSOT.md) to learn about canonical documentation
+1. Start with [AGENTS.md](file/AGENTS.md) to understand the foundational convention
+2. Review [SSOT.md](file/SSOT.md) to learn about canonical documentation
 3. Explore [sdk/README.md](sdk/README.md) if you're integrating OpenAI SDKs for agent or code generation features
 4. Consult [engineering/README.md](engineering/README.md) when planning context or prompt strategies
 5. Browse other guides based on your immediate needs, adapting the sample workflows and checklists to your context

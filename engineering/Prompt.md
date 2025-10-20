@@ -444,8 +444,8 @@ Avoid these prompt engineering mistakes:
 - `/prompt/` - Vendor-specific prompt engineering notes
 - `/context/` - Context engineering best practices
 - `/sdk/` - SDK-specific implementation guidance
-- `/markdown-file/AGENTS.md` - Operational procedures for AI agents
-- `/markdown-file/SKILL.md` - Packaging prompts as reusable Skills
+- `/file/AGENTS.md` - Operational procedures for AI agents
+- `/file/SKILL.md` - Packaging prompts as reusable Skills
 
 ## Update Log
 

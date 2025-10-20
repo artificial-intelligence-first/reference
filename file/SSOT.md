@@ -77,7 +77,7 @@ repository/
 └── src/                 # Implementation follows SSOT
 ```
 
-**Note**: This reference repository stores `SSOT.md` in `markdown-file/` for organizational purposes. When implementing SSOT in your own projects, place it at the root for easier access and discoverability.
+**Note**: This reference repository stores `SSOT.md` in `file/` for organizational purposes. When implementing SSOT in your own projects, place it at the root for easier access and discoverability.
 
 ### Structure *(Sample outline)*
 
