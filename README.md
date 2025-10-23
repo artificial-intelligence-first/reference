@@ -49,10 +49,12 @@ ssot/
 │   └── prompt.md                      # Prompt engineering patterns
 ├── platforms/                         # Platform-specific implementations
 │   ├── README.md                      # Platform guides overview
-│   └── openai/                        # OpenAI-specific guides
-│       ├── agents-sdk.md              # Responses API patterns
-│       ├── agent-kit.md               # AgentKit framework concepts
-│       └── codex.md                   # Code generation patterns
+│   ├── openai/                        # OpenAI-specific guides
+│   │   ├── agents-sdk.md              # Responses API patterns
+│   │   ├── agent-kit.md               # AgentKit framework concepts
+│   │   └── codex.md                   # Code generation patterns
+│   └── google/                        # Google-specific guides
+│       └── a2a.md                     # Agent2Agent protocol
 ├── _meta/                             # Governance & style guides
 │   ├── CONTRIBUTING.md                # How to add/update content
 │   ├── STYLE.md                       # Writing conventions
@@ -223,11 +225,29 @@ ssot/
 
 ---
 
+## Google
+
+### [Agent2Agent (A2A) Protocol](platforms/google/a2a.md)
+**Open protocol for AI agent interoperability**
+
+- JSON-RPC 2.0 over HTTP(S) communication standard
+- Agent discovery via Agent Cards
+- Async-first design for long-running tasks
+- Server-Sent Events (SSE) streaming
+- Opaque execution model for privacy and security
+- Linux Foundation hosted open-source project
+
+**Use when**: Building multi-agent systems, enabling cross-framework agent communication, implementing agent discovery and task delegation.
+
+**Industry Support**: Hosted by Linux Foundation with support from 50+ companies including AWS, Microsoft, Google, Salesforce, SAP, and ServiceNow.
+
+---
+
 ### Future Platforms
 
 Planned additions:
 - **`platforms/anthropic/`** - Claude API, prompt caching, extended context
-- **`platforms/google/`** - Gemini API, Vertex AI, multimodal patterns
+- **`platforms/google/`** - Gemini API, Vertex AI, multimodal patterns (additional guides)
 - **`platforms/microsoft/`** - Azure OpenAI, Copilot integration
 
 ---
@@ -453,7 +473,8 @@ This repository synthesizes best practices from:
 
 - **Anthropic** - Claude documentation, prompt engineering guides, Agent Skills
 - **OpenAI** - AGENTS.md convention, Responses API, code generation patterns
-- **Google** - Vertex AI prompt design, Gemini documentation
+- **Google** - Vertex AI prompt design, Gemini documentation, Agent2Agent protocol
+- **Linux Foundation** - A2A Protocol Project, agent interoperability standards
 - **DAIR.AI** - Context engineering research
 - **DeepMind** - Prompting research and techniques
 - **Community** - Keep a Changelog, Semantic Versioning
