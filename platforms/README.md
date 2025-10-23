@@ -199,4 +199,4 @@ Historical Codex documentation is linked in `openai/codex.md` with deprecation n
 
 ---
 
-**Remember:** Always verify model IDs, API endpoints, and SDK versions against the official OpenAI release notes before committing changes. This reference is a living document—keep it aligned with the platform to preserve trust.***
+**Remember:** Always verify model IDs, API endpoints, and SDK versions against the official OpenAI release notes before committing changes.***

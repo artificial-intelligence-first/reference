@@ -22,15 +22,13 @@
 
 ## Philosophy
 
-This repository follows an **Evergreen Note** approach:
+This repository maintains one topic per file with the following principles:
 
-- **1 Topic = 1 File**: Each markdown file is a living document on a single topic
-- **Continuous Growth**: New information is integrated into existing documents, not appended
+- **1 Topic = 1 File**: Each markdown file covers a single topic
+- **Continuous Growth**: New information is integrated into existing documents
 - **Source Attribution**: Every claim links to an authoritative source
 - **Progressive Disclosure**: Information is organized from essential to detailed
 - **Machine & Human Readable**: Structured for both AI parsing and human comprehension
-
-**Key Principle**: We don't create new files for every new piece of information. Instead, we **enrich existing topics** by integrating new knowledge into the appropriate sections.
 
 ---
 
@@ -505,4 +503,3 @@ docs(_meta/taxonomy): add 'observability' tag
 
 **Document ID**: `_meta/CONTRIBUTING`
 **Last Updated**: 2025-10-23
-**Status**: Living Document

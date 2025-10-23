@@ -1,6 +1,6 @@
 # AI-First Development Reference (SSOT)
 
-> **For Humans**: This repository is a curated, living knowledge base of best practices and conventions for working effectively with AI coding assistants. Use these guides to structure your projects in ways that maximize AI productivity while maintaining knowledge assets over time.
+> **For Humans**: This repository contains best practices and conventions for working effectively with AI coding assistants. Use these guides to structure your projects for maximum AI productivity.
 >
 > **For AI Agents**: This repository contains canonical reference documentation for AI-first development patterns. Read these guides to understand how to structure work, maintain documentation, and collaborate effectively with human developers. When asked to update topics, follow the governance documents in `_meta/`.
 
@@ -8,9 +8,7 @@
 
 ## Vision
 
-A **Single Source of Truth (SSOT)** for AI-first development knowledge that grows through continuous integration of new insights. Each topic is a living document that accumulates knowledge over time—like a NotebookLM for best practices.
-
-**Core Principle**: We don't create new files for every new piece of information. Instead, we **enrich existing topics** by integrating new knowledge into the appropriate sections, with full source attribution.
+A **Single Source of Truth (SSOT)** for AI-first development knowledge.
 
 ---
 
@@ -127,7 +125,7 @@ ssot/
 ### [PLANS.md](topics/PLANS.md)
 **ExecPlans workflow for documenting complex initiatives**
 
-- Living document structure
+- Document structure and format
 - Progress tracking and decision logging
 - Surprise and discovery capture
 - Multi-session task continuity
@@ -308,7 +306,7 @@ Planned additions:
 
 ## How to Contribute
 
-We welcome contributions of insights, best practices, and new knowledge. This repository follows an **Evergreen Note** approach—information is continuously integrated into existing topics rather than creating scattered new files.
+We welcome contributions of insights, best practices, and new knowledge.
 
 ### Adding Information to Existing Topics
 
@@ -460,15 +458,10 @@ This repository synthesizes best practices from:
 - **Google** - Vertex AI prompt design, Gemini documentation
 - **DAIR.AI** - Context engineering research
 - **DeepMind** - Prompting research and techniques
-- **Community** - Keep a Changelog, Semantic Versioning, Evergreen Notes
+- **Community** - Keep a Changelog, Semantic Versioning
 
 ---
 
 **Repository Maintainer**: AI-First Development Team
 **Last Updated**: 2025-10-23
-**Status**: Living Repository
 **Canonical URL**: `https://github.com/artificial-intelligence-first/ssot`
-
----
-
-> 💡 **Remember**: This is a living knowledge base. When you learn something new about AI-first development, don't create a new file—enrich an existing topic with your insights.

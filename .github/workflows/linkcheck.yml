@@ -30,10 +30,7 @@ jobs:
             --accept 200,201,202,203,204,206,301,302,307,308,429
             --timeout 60
             --max-retries 3
-            --exclude "example\\.com"
-            --exclude "127\\.0\\.0\\.1"
-            --exclude "localhost"
-            --exclude "platform\\.openai\\.com"
+            --exclude-file .lycheeignore
             "topics/**/*.md"
             "engineering/**/*.md"
             "platforms/**/*.md"

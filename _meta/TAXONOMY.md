@@ -334,4 +334,3 @@ During quarterly audits:
 
 **Document ID**: `_meta/TAXONOMY`
 **Last Updated**: 2025-10-23
-**Status**: Living Document

@@ -300,4 +300,4 @@ Document any incidents in PLANS.md under “Surprises & Discoveries”.
 
 ---
 
-**Remember:** The official SDK is your source of truth. Keep dependencies evergreen, watch for deprecation notices, and update this guide whenever OpenAI ships a new agent capability.***
+**Remember:** The official SDK is your source of truth. Keep dependencies up-to-date, watch for deprecation notices, and update this guide whenever OpenAI ships a new agent capability.***
