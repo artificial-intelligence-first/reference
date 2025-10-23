@@ -5,7 +5,11 @@ status: living
 last_updated: 2025-10-23
 tags: [openai, agent-kit, agents, orchestration, patterns]
 summary: "Community practices for building higher-level AgentKit frameworks on top of OpenAI SDKs."
-sources: []
+sources:
+  - { id: R1, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-23" }
+  - { id: R2, title: "OpenAI Moderation API", url: "https://platform.openai.com/docs/guides/moderation", accessed: "2025-10-23" }
+  - { id: R3, title: "OpenAI Embeddings Guide", url: "https://platform.openai.com/docs/guides/embeddings", accessed: "2025-10-23" }
+  - { id: R4, title: "OpenAI Best Practices for Agent Safety", url: "https://platform.openai.com/docs/guides/safety-best-practices", accessed: "2025-10-23" }
 ---
 
 # OpenAI AgentKit (Conceptual Patterns)
@@ -308,6 +312,7 @@ Log incidents in project PLANS.md and update AGENTS.md once resolved.
 
 ## 10. Update Log
 
+- 2025-10-23: Added official OpenAI documentation references for Responses API, Moderation, Embeddings, and Safety Best Practices.
 - 2025-10-20: Reframed AgentKit as a conceptual layer, swapped hypothetical APIs for sample interfaces, and aligned safety/memory patterns with the 2025 OpenAI Responses API.
 
 ---

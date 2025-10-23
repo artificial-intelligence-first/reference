@@ -5,7 +5,11 @@ status: living
 last_updated: 2025-10-23
 tags: [openai, code-generation, codex, gpt-4, responses-api]
 summary: "Modern code-assistance patterns using OpenAI Responses API after Codex deprecation."
-sources: []
+sources:
+  - { id: R1, title: "OpenAI Models Documentation", url: "https://platform.openai.com/docs/models", accessed: "2025-10-23" }
+  - { id: R2, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-23" }
+  - { id: R3, title: "OpenAI Completions API (Legacy)", url: "https://platform.openai.com/docs/guides/completions", accessed: "2025-10-23" }
+  - { id: R4, title: "OpenAI Deprecations", url: "https://platform.openai.com/docs/deprecations", accessed: "2025-10-23" }
 ---
 
 # OpenAI Code Generation Guide (Post-Codex)
@@ -227,6 +231,7 @@ If you still support legacy integrations:
 
 ## 10. Update Log
 
+- 2025-10-23: Added official OpenAI documentation references for Models, Responses API, legacy Completions API, and Deprecations.
 - 2025-10-20: Replaced Codex examples with Responses API patterns, added legacy deprecation notice, and refreshed performance/safety guidance.
 
 ---

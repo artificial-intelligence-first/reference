@@ -5,7 +5,12 @@ status: living
 last_updated: 2025-10-23
 tags: [openai, agents, sdk, responses-api, tool-calling]
 summary: "Hands-on patterns for building agents with OpenAI SDKs using Responses API and tool calling."
-sources: []
+sources:
+  - { id: R1, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-23" }
+  - { id: R2, title: "OpenAI Function Calling Guide", url: "https://platform.openai.com/docs/guides/function-calling", accessed: "2025-10-23" }
+  - { id: R3, title: "openai-python - Official Python SDK", url: "https://github.com/openai/openai-python", accessed: "2025-10-23" }
+  - { id: R4, title: "openai-node - Official Node.js SDK", url: "https://github.com/openai/openai-node", accessed: "2025-10-23" }
+  - { id: R5, title: "OpenAI Streaming Guide", url: "https://platform.openai.com/docs/guides/streaming", accessed: "2025-10-23" }
 ---
 
 # OpenAI Agents SDK (Responses API)
@@ -296,6 +301,7 @@ Document any incidents in PLANS.md under “Surprises & Discoveries”.
 
 ## 10. Update Log
 
+- 2025-10-23: Added official OpenAI documentation references for Responses API, Function Calling, SDKs, and Streaming.
 - 2025-10-20: Rebuilt guide around the Responses API, updated code samples for `openai` SDK ≥ 1.50, and aligned reliability/safety recommendations with repository conventions.
 
 ---
