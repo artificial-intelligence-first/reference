@@ -6,15 +6,9 @@ last_updated: 2025-10-23
 tags: [plans, execplans, project-management, documentation, workflow]
 summary: "ExecPlan workflow for documenting and tracking complex, multi-step development initiatives."
 sources:
-  - title: "OpenAI Cookbook - Exec Plans"
-    url: "https://cookbook.openai.com/articles/codex_exec_plans"
-    type: "official"
-  - title: "Agile User Stories"
-    url: "https://www.mountaingoatsoftware.com/agile/user-stories"
-    type: "best-practice"
-  - title: "Architecture Decision Records (ADR)"
-    url: "https://adr.github.io/"
-    type: "reference"
+  - { id: R1, title: "OpenAI Cookbook - Exec Plans", url: "https://cookbook.openai.com/articles/codex_exec_plans", accessed: "2025-10-23" }
+  - { id: R2, title: "Agile User Stories - Mountain Goat Software", url: "https://www.mountaingoatsoftware.com/agile/user-stories", accessed: "2025-10-23" }
+  - { id: R3, title: "Architecture Decision Records (ADR)", url: "https://adr.github.io/", accessed: "2025-10-23" }
 ---
 
 # PLANS.md Guide (ExecPlans)

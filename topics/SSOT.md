@@ -6,15 +6,9 @@ last_updated: 2025-10-23
 tags: [ssot, governance, documentation, data-contracts, policies]
 summary: "Single Source of Truth principle for maintaining authoritative, consistent documentation and canonical definitions."
 sources:
-  - title: "Single source of truth - Wikipedia"
-    url: "https://en.wikipedia.org/wiki/Single_source_of_truth"
-    type: "reference"
-  - title: "The Twelve-Factor App - III. Config"
-    url: "https://12factor.net/config"
-    type: "best-practice"
-  - title: "Documentation as Code - Write the Docs"
-    url: "https://www.writethedocs.org/guide/docs-as-code/"
-    type: "community"
+  - { id: R1, title: "Single source of truth - Wikipedia", url: "https://en.wikipedia.org/wiki/Single_source_of_truth", accessed: "2025-10-23" }
+  - { id: R2, title: "The Twelve-Factor App - III. Config", url: "https://12factor.net/config", accessed: "2025-10-23" }
+  - { id: R3, title: "Documentation as Code - Write the Docs", url: "https://www.writethedocs.org/guide/docs-as-code/", accessed: "2025-10-23" }
 ---
 
 # SSOT.md Guide (Single Source of Truth)

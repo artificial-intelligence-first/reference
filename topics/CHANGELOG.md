@@ -6,18 +6,10 @@ last_updated: 2025-10-23
 tags: [changelog, versioning, releases, documentation, semver]
 summary: "Keep a Changelog format for maintaining transparent, human-readable project version history and release notes."
 sources:
-  - title: "Keep a Changelog 1.1.0"
-    url: "https://keepachangelog.com/en/1.1.0/"
-    type: "official"
-  - title: "Semantic Versioning 2.0.0"
-    url: "https://semver.org/spec/v2.0.0.html"
-    type: "official"
-  - title: "Openchangelog Documentation"
-    url: "https://openchangelog.com/docs"
-    type: "tool"
-  - title: "Common Changelog"
-    url: "https://common-changelog.org/"
-    type: "reference"
+  - { id: R1, title: "Keep a Changelog 1.1.0", url: "https://keepachangelog.com/en/1.1.0/", accessed: "2025-10-23" }
+  - { id: R2, title: "Semantic Versioning 2.0.0", url: "https://semver.org/spec/v2.0.0.html", accessed: "2025-10-23" }
+  - { id: R3, title: "Openchangelog Documentation", url: "https://openchangelog.com/docs", accessed: "2025-10-23" }
+  - { id: R4, title: "Common Changelog", url: "https://common-changelog.org/", accessed: "2025-10-23" }
 ---
 
 # CHANGELOG.md Guide
