@@ -1,7 +1,15 @@
-Sources (synced: 2025-10-20):
-- Anthropic – Effective Context Engineering for AI Agents: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-- Anthropic – Claude Long Context Tips: https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/long-context-tips
-- DAIR.AI – Context Engineering Guide: https://www.promptingguide.ai/guides/context-engineering-guide
+---
+title: Context Engineering for AI-First Development
+slug: context-engineering
+status: living
+last_updated: 2025-10-23
+tags: [context, rag, retrieval, prompt-engineering, ai-first]
+summary: "Best practices for designing, retrieving, and evaluating context bundles that feed AI workflows across platforms."
+sources:
+  - { id: R1, title: "Effective Context Engineering for AI Agents", url: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents", accessed: "2025-10-20" }
+  - { id: R2, title: "Claude Long Context Tips", url: "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/long-context-tips", accessed: "2025-10-20" }
+  - { id: R3, title: "Context Engineering Guide", url: "https://www.promptingguide.ai/guides/context-engineering-guide", accessed: "2025-10-20" }
+---
 
 # Context Engineering for AI-First Development
 
@@ -208,9 +216,9 @@ Avoid these context engineering mistakes:
 - DAIR.AI: [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide)
 
 ### Related Documentation
-- `/context/` - Vendor-specific context engineering notes
-- `/prompt/` - Prompt engineering best practices
-- `/sdk/` - SDK-specific implementation guidance
+- `engineering/context.md` - Vendor-specific context engineering notes
+- `engineering/prompt.md` - Prompt engineering best practices
+- `platforms/` - SDK-specific implementation guidance
 
 ## Update Log
 

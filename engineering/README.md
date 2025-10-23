@@ -8,18 +8,18 @@
 
 | Guide | Focus | Primary Audience | When to Use |
 |-------|-------|------------------|-------------|
-| `Context.md` | Designing, evaluating, and operating context pipelines | Platform engineers, AI agents managing retrieval | Building or refining retrieval + memory stacks, long-context workflows |
-| `Prompt.md` | Prompt engineering patterns across Anthropic, Google, OpenAI | Developers, technical writers, AI agents crafting prompts | Creating reusable prompts, aligning multi-vendor behaviors |
+| `context.md` | Designing, evaluating, and operating context pipelines | Platform engineers, AI agents managing retrieval | Building or refining retrieval + memory stacks, long-context workflows |
+| `prompt.md` | Prompt engineering patterns across Anthropic, Google, OpenAI | Developers, technical writers, AI agents crafting prompts | Creating reusable prompts, aligning multi-vendor behaviors |
 
 ## Quick Decision Guide
 
-- Start with **`Context.md`** when you are:
+- Start with **`context.md`** when you are:
   - Implementing or auditing retrieval pipelines
   - Planning multi-document or long-context layouts (e.g., Claude 100k context)
   - Defining metrics to monitor context relevance, recency, reliability, responsibility
   - Rolling out versioned context bundles or progressive disclosure strategies
 
-- Start with **`Prompt.md`** when you are:
+- Start with **`prompt.md`** when you are:
   - Designing prompt templates or negative prompting guardrails
   - Comparing Anthropic / Google / OpenAI prompt recommendations
   - Packaging prompts as reusable Skills or SOPs for AGENTS.md
@@ -27,11 +27,11 @@
 
 ## Integration with Repository Docs
 
-- **`file/AGENTS.md`** – Reference testing/operational procedures when updating prompt or context processes.
-- **`file/SSOT.md`** – Record canonical terminology, schema definitions, and policy links used inside prompts/context bundles.
-- **`file/PLANS.md`** – Capture context/prompt architecture work inside ExecPlans (decisions, surprises, validation).
-- **`file/SKILL.md`** – When a prompt or context pattern is reusable, package it as a Skill and document triggers.
-- **`sdk/README.md`** – Combine these guides with SDK-specific instructions when implementing retrieval or prompt orchestration in code.
+- **`topics/AGENTS.md`** – Reference testing/operational procedures when updating prompt or context processes.
+- **`topics/SSOT.md`** – Record canonical terminology, schema definitions, and policy links used inside prompts/context bundles.
+- **`topics/PLANS.md`** – Capture context/prompt architecture work inside ExecPlans (decisions, surprises, validation).
+- **`topics/SKILL.md`** – When a prompt or context pattern is reusable, package it as a Skill and document triggers.
+- **`platforms/README.md`** – Combine these guides with SDK-specific instructions when implementing retrieval or prompt orchestration in code.
 
 ## Maintenance Tips
 
@@ -42,7 +42,7 @@
 
 ## Update Log
 
-- 2025-10-20: Added directory index describing the purpose of `Context.md` and `Prompt.md` and how they integrate with the rest of the repository.
+- 2025-10-20: Added directory index describing the purpose of `context.md` and `prompt.md` and how they integrate with the rest of the repository.
 
 ---
 

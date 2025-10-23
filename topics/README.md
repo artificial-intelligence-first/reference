@@ -1,12 +1,12 @@
 # AI-First Development Conventions (Directory Guide)
 
-> **For Humans**: This index explains how to navigate the foundational governance guides stored in `file/`. Use it as a quick reminder of what each document covers and when to update it.
+> **For Humans**: This index explains how to navigate the foundational governance guides stored in `topics/`. Use it as a quick reminder of what each document covers and when to update it.
 >
 > **For AI Agents**: Review this guide before touching the documents in this directory. It clarifies which file governs which behaviour so you can reference or update the right source of truth.
 
 ## Overview
 
-The `file/` directory contains five core specifications that govern AI-first development projects:
+The `topics/` directory contains five core specifications that govern AI-first development projects:
 
 1. **AGENTS.md** – Operational procedures and commands for contributors and AI agents.
 2. **CHANGELOG.md** – Keep a Changelog format reference for communicating releases.
@@ -41,7 +41,7 @@ These documents are authoritative references and should be kept consistent with 
 ## Related Resources
 
 - Root `README.md` – Repository-wide map and guidance.
-- `sdk/README.md` – OpenAI SDK and framework documentation (complements these governance docs).
+- `platforms/README.md` – Platform-specific SDK and framework documentation (complements these governance docs).
 
 ---
 

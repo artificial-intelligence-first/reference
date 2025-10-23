@@ -1,3 +1,13 @@
+---
+title: AGENTS.md Guide
+slug: agents
+status: living
+last_updated: 2025-10-23
+tags: [agents, conventions, documentation, development, ai-first]
+summary: "AGENTS.md convention for structuring AI-agent-friendly operational documentation in repositories."
+sources: []
+---
+
 # AGENTS.md Guide
 
 > **For Humans**: This guide explains the AGENTS.md convention for structuring AI-agent-friendly documentation in your repositories.

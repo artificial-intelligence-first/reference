@@ -1,12 +1,22 @@
+---
+title: PLANS.md Guide (ExecPlans)
+slug: plans
+status: living
+last_updated: 2025-10-23
+tags: [plans, execplans, project-management, documentation, workflow]
+summary: "ExecPlan workflow for documenting and tracking complex, multi-step development initiatives."
+sources: []
+---
+
 # PLANS.md Guide (ExecPlans)
 
 > **For Humans**: This guide explains the ExecPlan workflow for documenting multi-step initiatives, inspired by OpenAI Cookbook patterns<sup>[1](#footnote-openai-cookbook)</sup>.
 >
-> **For AI Agents**: ExecPlans are living execution specifications that keep multi-hour coding tasks aligned. Maintain these documents throughout work execution, updating progress, decisions, and discoveries in real-time.
+> **For AI Agents**: ExecPlans are execution specifications that keep multi-hour coding tasks aligned. Maintain these documents throughout work execution, updating progress, decisions, and discoveries in real-time.
 
 ## ExecPlan in Five Minutes
 
-**What**: A living document that tracks complex, multi-step initiatives from start to finish.
+**What**: A document that tracks complex, multi-step initiatives from start to finish.
 
 **When**: Create an ExecPlan for tasks spanning multiple hours, involving multiple phases, or requiring decision documentation.
 
@@ -60,7 +70,7 @@ Every ExecPlan must include these canonical sections:
 ```markdown
 # <Short, action-oriented description>
 
-This ExecPlan is a living document. Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current as work proceeds.
+Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current as work proceeds.
 
 ## Purpose / Big Picture
 *Why this work matters, what problem it solves, and what success looks like*
@@ -424,7 +434,7 @@ git checkout HEAD~1 -- src/auth/
 ```markdown
 # [Action-Oriented Title]
 
-This ExecPlan is a living document. Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current as work proceeds.
+Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospective current as work proceeds.
 
 ## Purpose / Big Picture
 

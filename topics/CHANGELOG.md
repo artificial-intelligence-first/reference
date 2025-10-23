@@ -1,3 +1,13 @@
+---
+title: CHANGELOG.md Guide
+slug: changelog
+status: living
+last_updated: 2025-10-23
+tags: [changelog, versioning, releases, documentation, semver]
+summary: "Keep a Changelog format for maintaining transparent, human-readable project version history and release notes."
+sources: []
+---
+
 # CHANGELOG.md Guide
 
 > **For Humans**: This guide explains how to maintain a changelog using the Keep a Changelog format for transparent project history.

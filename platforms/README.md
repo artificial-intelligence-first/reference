@@ -6,7 +6,7 @@
 
 ## Overview
 
-The `sdk/` directory captures three complementary ways to build with OpenAI today:
+The `platforms/` directory captures three complementary ways to build with OpenAI today:
 
 1. **AgentKit (Conceptual scaffold)** – community patterns that layer structure, memory, and guardrails *on top of* the official SDKs. This guide is intentionally marked as conceptual because the exact API surface will differ across internal or third-party implementations.
 2. **Agents SDK (Low-level APIs)** – practical usage of the official OpenAI Python and JavaScript SDKs powering the [Responses API](https://platform.openai.com/docs/guides/responses) and tool calling. Focus here if you need fine-grained control.
@@ -44,9 +44,9 @@ The `sdk/` directory captures three complementary ways to build with OpenAI toda
 
 ## Documentation Map
 
-- **[Agent_Kit.md](Agent_Kit.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
-- **[Agents_SDK.md](Agents_SDK.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
-- **[Codex-SDK.md](Codex-SDK.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
+- **[agent-kit.md](openai/agent-kit.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
+- **[agents-sdk.md](openai/agents-sdk.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
+- **[codex.md](openai/codex.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
 
 Each guide flags historical content with “Legacy” callouts and links back to the official platform documentation.
 
@@ -154,14 +154,14 @@ OPENAI_API_KEY=sk-your-key
 OPENAI_API_BASE=https://api.openai.com/v1  # default
 ```
 
-AgentKit-specific tooling (if you adopt a community framework) will include additional dependencies such as Redis clients or vector stores—see `Agent_Kit.md` for “Sample” configuration tables.
+AgentKit-specific tooling (if you adopt a community framework) will include additional dependencies such as Redis clients or vector stores—see `openai/agent-kit.md` for "Sample" configuration tables.
 
-## Integration with file/ Guides
+## Integration with topics/ Guides
 
-- **AGENTS.md** – update the “Dev Environment / Testing / PR Instructions” sections with the commands from `Agents_SDK.md`.
-- **SSOT.md** – record canonical SDK versions, approved models, and safety policies established in `Agent_Kit.md`.
+- **AGENTS.md** – update the "Dev Environment / Testing / PR Instructions" sections with the commands from `openai/agents-sdk.md`.
+- **SSOT.md** – record canonical SDK versions, approved models, and safety policies established in `openai/agent-kit.md`.
 - **PLANS.md** – when executing ExecPlans involving SDK integrations, reference validation steps defined in the relevant SDK guide.
-- **SKILL.md** – if packaging Skills around these SDKs, ensure triggers point to the latest API names (`Responses API`, `Tool calling`) instead of legacy “Codex”.
+- **SKILL.md** – if packaging Skills around these SDKs, ensure triggers point to the latest API names (`Responses API`, `Tool calling`) instead of legacy "Codex".
 
 ## Troubleshooting (Shared Themes)
 
@@ -181,13 +181,13 @@ AgentKit-specific tooling (if you adopt a community framework) will include addi
 - [OpenAI Python SDK](https://github.com/openai/openai-python)
 - [OpenAI Node.js SDK](https://github.com/openai/openai-node)
 
-Historical Codex documentation is linked in `Codex-SDK.md` with deprecation notices.
+Historical Codex documentation is linked in `openai/codex.md` with deprecation notices.
 
 ## Adoption Checklist
 
 - [ ] Confirm organisational policy for model usage (record in SSOT.md).
 - [ ] Install the latest OpenAI SDKs and run health checks (`python -m openai health-check` / `npx openai health-check`).
-- [ ] Prototype workflows in staging using the `Agents_SDK.md` examples.
+- [ ] Prototype workflows in staging using the `openai/agents-sdk.md` examples.
 - [ ] If using conceptual AgentKit patterns, adapt them to your internal frameworks and annotate differences.
 - [ ] Define validation and rollback procedures in project ExecPlans (`PLANS.md`).
 - [ ] Update AGENTS.md with testing commands, linting, and deployment steps.
@@ -199,4 +199,4 @@ Historical Codex documentation is linked in `Codex-SDK.md` with deprecation noti
 
 ---
 
-**Remember:** Always verify model IDs, API endpoints, and SDK versions against the official OpenAI release notes before committing changes. This reference is a living document—keep it aligned with the platform to preserve trust.***
+**Remember:** Always verify model IDs, API endpoints, and SDK versions against the official OpenAI release notes before committing changes.***

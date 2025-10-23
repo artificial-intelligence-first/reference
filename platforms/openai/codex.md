@@ -1,3 +1,13 @@
+---
+title: OpenAI Code Generation Guide (Post-Codex)
+slug: openai-code-generation
+status: living
+last_updated: 2025-10-23
+tags: [openai, code-generation, codex, gpt-4, responses-api]
+summary: "Modern code-assistance patterns using OpenAI Responses API after Codex deprecation."
+sources: []
+---
+
 # OpenAI Code Generation Guide (Post-Codex)
 
 > **For Humans**: Codex-specific models (`code-davinci-*`) are deprecated. This guide explains how to deliver code-assistance features with the modern OpenAI Responses API and GPT-4.x models. Legacy behaviour is retained in marked sections for teams still migrating.
