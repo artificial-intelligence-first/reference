@@ -60,19 +60,14 @@ ssot/
 ├── _templates/                        # Templates for new content
 │   ├── TOPIC_TEMPLATE.md              # New topic template
 │   └── SECTION_TEMPLATE.md            # Section templates
-├── _assets/                           # Images, diagrams, resources
-│   ├── topics/                        # Topic-related assets
-│   ├── engineering/                   # Engineering-related assets
-│   └── platforms/                     # Platform-related assets
-├── .github/                           # GitHub automation
-│   ├── workflows/                     # CI/CD pipelines
-│   │   ├── markdownlint.yml           # Markdown quality checks
-│   │   └── linkcheck.yml              # Broken link detection
-│   ├── ISSUE_TEMPLATE/                # Issue templates
-│   │   ├── topic_update.md            # Request topic updates
-│   │   └── new_topic.md               # Propose new topics
-│   └── PULL_REQUEST_TEMPLATE.md       # PR checklist
-└── scripts/                           # Utility scripts
+└── .github/                           # GitHub automation
+    ├── workflows/                     # CI/CD pipelines
+    │   ├── markdownlint.yml           # Markdown quality checks
+    │   └── linkcheck.yml              # Broken link detection
+    ├── ISSUE_TEMPLATE/                # Issue templates
+    │   ├── topic_update.md            # Request topic updates
+    │   └── new_topic.md               # Propose new topics
+    └── PULL_REQUEST_TEMPLATE.md       # PR checklist
 ```
 
 **Design Philosophy**:
@@ -81,7 +76,6 @@ ssot/
 - **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google)
 - **`_meta/`** - How to maintain this repository
 - **`_templates/`** - Scaffolding for new content
-- **`_assets/`** - Visual and supplementary resources
 
 ---
 
