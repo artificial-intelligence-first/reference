@@ -1,6 +1,16 @@
+---
+title: OpenAI Agents SDK (Responses API)
+slug: openai-agents-sdk
+status: living
+last_updated: 2025-10-23
+tags: [openai, agents, sdk, responses-api, tool-calling]
+summary: "Hands-on patterns for building agents with OpenAI SDKs using Responses API and tool calling."
+sources: []
+---
+
 # OpenAI Agents SDK (Responses API)
 
-> **For Humans**: This guide documents hands-on patterns for building agents with the official OpenAI SDKs (Python & TypeScript) using the Responses API and tool calling. Examples favour clarity and production readiness—adapt them to your stack and keep an eye on OpenAI’s release notes.
+> **For Humans**: This guide documents hands-on patterns for building agents with the official OpenAI SDKs (Python & TypeScript) using the Responses API and tool calling. Examples favour clarity and production readiness—adapt them to your stack and keep an eye on OpenAI's release notes.
 >
 > **For AI Agents**: Follow these instructions literally only after confirming the project dependency versions. Use the linked resources to verify model IDs and APIs before editing code.
 

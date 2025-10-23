@@ -1,3 +1,13 @@
+---
+title: PLANS.md Guide (ExecPlans)
+slug: plans
+status: living
+last_updated: 2025-10-23
+tags: [plans, execplans, project-management, documentation, workflow]
+summary: "ExecPlan workflow for documenting and tracking complex, multi-step development initiatives as living documents."
+sources: []
+---
+
 # PLANS.md Guide (ExecPlans)
 
 > **For Humans**: This guide explains the ExecPlan workflow for documenting multi-step initiatives, inspired by OpenAI Cookbook patterns<sup>[1](#footnote-openai-cookbook)</sup>.

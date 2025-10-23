@@ -1,10 +1,18 @@
-Sources (synced: 2025-10-20):
-- Anthropic Prompt Engineering Overview: https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview
-- Anthropic Prompt Engineering Interactive Tutorial: https://github.com/anthropics/prompt-eng-interactive-tutorial
-- Google Vertex AI Prompt Design: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design
-- DeepMind Prompting Research (paper 83400): https://deepmind.google/research/publications/83400/
-- DeepMind Prompting Research (paper 90773): https://deepmind.google/research/publications/90773/
-- OpenAI Prompt Engineering Guide: https://platform.openai.com/docs/guides/prompt-engineering
+---
+title: Prompt Engineering for AI-First Development
+slug: prompt-engineering
+status: living
+last_updated: 2025-10-23
+tags: [prompt-engineering, prompting, ai-first, best-practices]
+summary: "Cross-platform prompt engineering best practices from Anthropic, Google, and OpenAI for reliable AI outputs."
+sources:
+  - { id: R1, title: "Anthropic Prompt Engineering Overview", url: "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview", accessed: "2025-10-20" }
+  - { id: R2, title: "Anthropic Prompt Engineering Interactive Tutorial", url: "https://github.com/anthropics/prompt-eng-interactive-tutorial", accessed: "2025-10-20" }
+  - { id: R3, title: "Google Vertex AI Prompt Design", url: "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design", accessed: "2025-10-20" }
+  - { id: R4, title: "DeepMind Prompting Research", url: "https://deepmind.google/research/publications/83400/", accessed: "2025-10-20" }
+  - { id: R5, title: "DeepMind Prompting Research", url: "https://deepmind.google/research/publications/90773/", accessed: "2025-10-20" }
+  - { id: R6, title: "OpenAI Prompt Engineering Guide", url: "https://platform.openai.com/docs/guides/prompt-engineering", accessed: "2025-10-20" }
+---
 
 # Prompt Engineering for AI-First Development
 

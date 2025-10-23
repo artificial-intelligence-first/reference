@@ -1,3 +1,13 @@
+---
+title: SSOT.md Guide (Single Source of Truth)
+slug: ssot
+status: living
+last_updated: 2025-10-23
+tags: [ssot, governance, documentation, data-contracts, policies]
+summary: "Single Source of Truth principle for maintaining authoritative, consistent documentation and canonical definitions."
+sources: []
+---
+
 # SSOT.md Guide (Single Source of Truth)
 
 > **For Humans**: This guide explains the Single Source of Truth principle for maintaining authoritative, consistent documentation across your project.

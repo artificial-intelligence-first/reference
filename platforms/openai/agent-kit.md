@@ -1,8 +1,18 @@
+---
+title: OpenAI AgentKit (Conceptual Patterns)
+slug: openai-agent-kit
+status: living
+last_updated: 2025-10-23
+tags: [openai, agent-kit, agents, orchestration, patterns]
+summary: "Community practices for building higher-level AgentKit frameworks on top of OpenAI SDKs."
+sources: []
+---
+
 # OpenAI AgentKit (Conceptual Patterns)
 
-> **For Humans**: This document consolidates community practices for building higher-level “AgentKit” style frameworks on top of the official OpenAI SDKs. OpenAI has showcased AgentKit concepts in blog posts, but the API surface is not yet a formal, versioned product. Treat every code sample as illustrative and adapt it to your organisation’s implementation.
+> **For Humans**: This document consolidates community practices for building higher-level "AgentKit" style frameworks on top of the official OpenAI SDKs. OpenAI has showcased AgentKit concepts in blog posts, but the API surface is not yet a formal, versioned product. Treat every code sample as illustrative and adapt it to your organisation's implementation.
 >
-> **For AI Agents**: Use these instructions as a conceptual template only. Confirm actual class names, package versions, and deployment scripts with the project’s repository before you attempt modifications.
+> **For AI Agents**: Use these instructions as a conceptual template only. Confirm actual class names, package versions, and deployment scripts with the project's repository before you attempt modifications.
 
 ---
 

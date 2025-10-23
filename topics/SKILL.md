@@ -1,3 +1,13 @@
+---
+title: SKILL.md Guide (Agent Skills)
+slug: skill
+status: living
+last_updated: 2025-10-23
+tags: [skill, anthropic, agents, domain-expertise, progressive-disclosure]
+summary: "Anthropic's Agent Skills specification for packaging domain expertise that AI agents can load on-demand."
+sources: []
+---
+
 # SKILL.md Guide (Agent Skills)
 
 > **For Humans**: This guide explains Anthropic's Agent Skills specification for packaging domain expertise that Claude can load on-demand.
