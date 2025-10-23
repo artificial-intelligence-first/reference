@@ -447,11 +447,11 @@ Avoid these prompt engineering mistakes:
 - OpenAI Codex Cookbook: [Examples](https://cookbook.openai.com/)
 
 ### Related Documentation
-- `/prompt/` - Vendor-specific prompt engineering notes
-- `/context/` - Context engineering best practices
-- `/sdk/` - SDK-specific implementation guidance
-- `/file/AGENTS.md` - Operational procedures for AI agents
-- `/file/SKILL.md` - Packaging prompts as reusable Skills
+- `engineering/prompt.md` - Vendor-specific prompt engineering notes
+- `engineering/context.md` - Context engineering best practices
+- `platforms/` - SDK-specific implementation guidance
+- `topics/AGENTS.md` - Operational procedures for AI agents
+- `topics/SKILL.md` - Packaging prompts as reusable Skills
 
 ## Update Log
 

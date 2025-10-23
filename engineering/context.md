@@ -216,9 +216,9 @@ Avoid these context engineering mistakes:
 - DAIR.AI: [Context Engineering Guide](https://www.promptingguide.ai/guides/context-engineering-guide)
 
 ### Related Documentation
-- `/context/` - Vendor-specific context engineering notes
-- `/prompt/` - Prompt engineering best practices
-- `/sdk/` - SDK-specific implementation guidance
+- `engineering/context.md` - Vendor-specific context engineering notes
+- `engineering/prompt.md` - Prompt engineering best practices
+- `platforms/` - SDK-specific implementation guidance
 
 ## Update Log
 
