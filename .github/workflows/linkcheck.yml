@@ -32,6 +32,9 @@ jobs:
             --timeout 60
             --max-retries 3
             --headers "accept=text/html"
+            --exclude "example\\.com"
+            --exclude "127\\.0\\.0\\.1"
+            --exclude "localhost"
             "topics/**/*.md"
             "engineering/**/*.md"
             "platforms/**/*.md"

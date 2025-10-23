@@ -157,8 +157,6 @@ Steps:
 
 **Resources**:
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
-- [Codex Prompting Guide](https://developers.openai.com/codex/prompting)
-- [GPT-5 Codex Cookbook](https://cookbook.openai.com/examples/gpt-5-codex_prompting_guide)
 
 ## Prompt Patterns and Templates
 
