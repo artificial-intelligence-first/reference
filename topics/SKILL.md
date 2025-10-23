@@ -5,7 +5,22 @@ status: living
 last_updated: 2025-10-23
 tags: [skill, anthropic, agents, domain-expertise, progressive-disclosure]
 summary: "Anthropic's Agent Skills specification for packaging domain expertise that AI agents can load on-demand."
-sources: []
+sources:
+  - title: "Anthropic Skills - Official Announcement"
+    url: "https://www.anthropic.com/news/skills"
+    type: "official"
+    date: "2025-10-16"
+  - title: "anthropics/skills - Official GitHub Repository"
+    url: "https://github.com/anthropics/skills"
+    type: "official-repository"
+  - title: "Claude Skills Documentation"
+    url: "https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview"
+    type: "official-docs"
+  - title: "Claude Skills are awesome, maybe a bigger deal than MCP"
+    url: "https://simonwillison.net/2025/Oct/16/claude-skills/"
+    type: "community"
+    author: "Simon Willison"
+    date: "2025-10-16"
 ---
 
 # SKILL.md Guide (Agent Skills)
@@ -16,7 +31,7 @@ sources: []
 
 ## Overview
 
-Agent Skills are modular packages that provide AI agents with domain-specific knowledge, procedures, and tooling on-demand. Developed by Anthropic, Skills enable:
+Agent Skills are modular packages that provide AI agents with domain-specific knowledge, procedures, and tooling on-demand. Developed by Anthropic and **officially launched in October 2025** [R1], Skills enable:
 
 - **Progressive disclosure** - Load expertise only when relevant to the current task
 - **Context efficiency** - Keep base context lightweight while accessing deep knowledge when needed
@@ -24,6 +39,30 @@ Agent Skills are modular packages that provide AI agents with domain-specific kn
 - **Specialization** - Package complex workflows (document processing, financial analysis, code generation) into accessible units
 
 **Key Innovation**: Skills deliver knowledge in a three-layer structure—metadata (about 100 tokens), instructions (several thousand tokens), and resources (unbounded as needed)—so agents can load only the information required at each stage<sup>[1](#footnote-anthropic-limits)</sup>.
+
+### Official Skills Repository
+
+Anthropic maintains an open-source repository at **[github.com/anthropics/skills](https://github.com/anthropics/skills)** [R2] containing:
+
+- **Document Skills** (`document-skills/`) - Official skills for creating and manipulating document formats:
+  - `.docx` (Word documents) with complex formatting
+  - `.pdf` generation and manipulation
+  - `.pptx` (PowerPoint presentations)
+  - `.xlsx` (Excel spreadsheets) with formulas and advanced features
+
+- **Example Skills** - Community-contributed and starter skills including [R2]:
+  - `algorithmic-art` - Generate algorithmic art and creative visualizations
+  - `canvas-design` - Design and layout assistance
+  - `slack-gif-creator` - Create GIFs for Slack communications
+  - `artifacts-builder` - Build Claude artifacts programmatically
+  - `mcp-server` - MCP server development patterns
+  - `webapp-testing` - Web application testing workflows
+  - `brand-guidelines` - Brand consistency enforcement
+  - `internal-comms` - Internal communication templates
+
+**Availability**: Skills are available to **Claude Pro, Max, Team, and Enterprise users** [R1][R4]
+
+**Claude Code Integration**: Skills can be installed as plugins via `/plugin install document-skills@anthropic-agent-skills` [R2]
 
 ## Skill Structure
 
@@ -391,22 +430,30 @@ cp -r financial-analyzer ~/.claude/skills/
 
 ### Anthropic Official Skills
 
-**Document Skills** (Available on all platforms)
-- Form filling from source documents
-- Document transformation and formatting
-- Structured data extraction
+**Document Skills** (`document-skills/`) [R2]
+Available on all platforms (Claude API, Claude Code, Claude.ai):
+- **Form filling** - Extract information from source documents to complete forms
+- **Document transformation** - Convert between formats (.docx, .pdf, .pptx, .xlsx)
+- **Structured data extraction** - Parse documents for specific data patterns
+- **Complex formatting** - Handle advanced document features (formulas, layouts, styles)
 
-**Example Skills** (GitHub repository)
-- Template starter Skill
-- Creative writing assistants
-- Technical documentation generators
-- Code generation patterns
+**Example Skills** (GitHub repository: `anthropics/skills`) [R2]
+Community-contributed and starter patterns:
+- **algorithmic-art** - Algorithmic art generation
+- **canvas-design** - Design layout and composition
+- **slack-gif-creator** - GIF creation for communications
+- **artifacts-builder** - Programmatic Claude artifact creation
+- **mcp-server** - MCP server development
+- **webapp-testing** - Web app testing workflows
+- **brand-guidelines** - Brand consistency enforcement
+- **internal-comms** - Internal communication templates
 
 ### Community Skills
 
-- Check Anthropic's GitHub and community forums
+- Check [Anthropic's GitHub](https://github.com/anthropics/skills) [R2] and community forums
+- Third-party collections: [claude-skills-collection](https://github.com/abubakarsiddik31/claude-skills-collection)
 - Always review source before installation
-- Report issues and contribute improvements
+- Report issues and contribute improvements via Pull Requests
 
 ## Integration Patterns
 
@@ -529,8 +576,9 @@ description: |
 
 ### Official Resources
 
-- [Claude Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
-- [Anthropic Skills GitHub](https://github.com/anthropics/skills) - Apache 2.0 examples
+- [Claude Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) [R3]
+- [Anthropic Skills GitHub](https://github.com/anthropics/skills) [R2] - Apache 2.0 licensed examples
+- [Claude Skills Announcement](https://www.anthropic.com/news/skills) [R1] - Official product launch
 - [Claude Cookbooks: Skills](https://github.com/anthropics/claude-cookbooks/tree/main/skills) - Tutorials and patterns
 
 ### Tutorials
@@ -539,9 +587,15 @@ description: |
 2. [Financial Applications](https://github.com/anthropics/claude-cookbooks/blob/main/skills/notebooks/02_skills_financial_applications.ipynb)
 3. [Custom Skill Development](https://github.com/anthropics/claude-cookbooks/blob/main/skills/notebooks/03_skills_custom_development.ipynb)
 
-### Blog Posts
+### Blog Posts & Community
 
 - [Equipping Agents for the Real World](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) - Engineering blog on Skills architecture
+- [Claude Skills are awesome, maybe a bigger deal than MCP](https://simonwillison.net/2025/Oct/16/claude-skills/) [R4] - Community perspective by Simon Willison
+
+### Third-Party Collections
+
+- [simonw/claude-skills](https://github.com/simonw/claude-skills) - Contents of /mnt/skills in Claude's code interpreter
+- [claude-skills-collection](https://github.com/abubakarsiddik31/claude-skills-collection) - Curated collection of official and community Skills
 
 ## Adoption Checklist
 
@@ -558,8 +612,16 @@ description: |
 - [ ] Train team on Skill usage
 - [ ] Establish Skill update and maintenance process
 
+## References
+
+- [R1] [Anthropic Skills - Official Announcement](https://www.anthropic.com/news/skills) - Claude Skills product launch (October 16, 2025)
+- [R2] [anthropics/skills GitHub Repository](https://github.com/anthropics/skills) - Official open-source Skills repository with document-skills and examples
+- [R3] [Claude Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) - Official technical documentation
+- [R4] [Claude Skills are awesome, maybe a bigger deal than MCP](https://simonwillison.net/2025/Oct/16/claude-skills/) - Community analysis by Simon Willison (October 16, 2025)
+
 ## Update Log
 
+- 2025-10-23: Added official GitHub repository (anthropics/skills), launch date (October 2025), official skills list (document-skills, example-skills), availability information (Pro/Max/Team/Enterprise), Claude Code plugin integration, third-party collections, and comprehensive references.
 - 2025-10-20: Published the initial edition (reorganized from Anthropic Skills documentation and public samples).
 
 ---
@@ -568,4 +630,4 @@ description: |
 
 ---
 
-<a name="footnote-anthropic-limits">1</a>: Reference: See Anthropic’s official “Agent Skills” documentation for the latest token limits.
+<a name="footnote-anthropic-limits">1</a>: Reference: See Anthropic's official "Agent Skills" documentation for the latest token limits.
