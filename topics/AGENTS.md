@@ -6,16 +6,12 @@ last_updated: 2025-10-23
 tags: [agents, conventions, documentation, development, ai-first]
 summary: "AGENTS.md convention for structuring AI-agent-friendly operational documentation in repositories."
 sources:
-  - title: "openai/agents.md GitHub Repository"
-    url: "https://github.com/openai/agents.md"
-    type: "official-spec"
-  - title: "AGENTS.md Official Website"
-    url: "https://agents.md"
-    type: "documentation"
-  - title: "DeepWiki: openai/agents.md Documentation"
-    url: "https://deepwiki.com/openai/agents.md"
-    type: "community"
-    accessed: "2025-10-23"
+  - { id: R1, title: "AGENTS.md Official Website", url: "https://agents.md", accessed: "2025-10-23" }
+  - { id: R2, title: "Cursor - AI-first Code Editor", url: "https://cursor.com", accessed: "2025-10-23" }
+  - { id: R3, title: "Jules - Google AI Coding Agent", url: "https://jules.google", accessed: "2025-10-23" }
+  - { id: R4, title: "Amp - AI Development Platform", url: "https://ampcode.com", accessed: "2025-10-23" }
+  - { id: R5, title: "Factory - Autonomous Software Engineering", url: "https://factory.ai", accessed: "2025-10-23" }
+  - { id: R6, title: "DeepWiki: openai/agents.md Documentation", url: "https://deepwiki.com/openai/agents.md", accessed: "2025-10-23" }
 ---
 
 # AGENTS.md Guide

@@ -6,21 +6,10 @@ last_updated: 2025-10-23
 tags: [skill, anthropic, agents, domain-expertise, progressive-disclosure]
 summary: "Anthropic's Agent Skills specification for packaging domain expertise that AI agents can load on-demand."
 sources:
-  - title: "Anthropic Skills - Official Announcement"
-    url: "https://www.anthropic.com/news/skills"
-    type: "official"
-    date: "2025-10-16"
-  - title: "anthropics/skills - Official GitHub Repository"
-    url: "https://github.com/anthropics/skills"
-    type: "official-repository"
-  - title: "Claude Skills Documentation"
-    url: "https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview"
-    type: "official-docs"
-  - title: "Claude Skills are awesome, maybe a bigger deal than MCP"
-    url: "https://simonwillison.net/2025/Oct/16/claude-skills/"
-    type: "community"
-    author: "Simon Willison"
-    date: "2025-10-16"
+  - { id: R1, title: "Anthropic Skills - Official Announcement", url: "https://www.anthropic.com/news/skills", accessed: "2025-10-23" }
+  - { id: R2, title: "anthropics/skills - Official GitHub Repository", url: "https://github.com/anthropics/skills", accessed: "2025-10-23" }
+  - { id: R3, title: "Claude Skills Documentation", url: "https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview", accessed: "2025-10-23" }
+  - { id: R4, title: "Claude Skills are awesome, maybe a bigger deal than MCP - Simon Willison", url: "https://simonwillison.net/2025/Oct/16/claude-skills/", accessed: "2025-10-23" }
 ---
 
 # SKILL.md Guide (Agent Skills)

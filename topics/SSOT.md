@@ -5,7 +5,10 @@ status: living
 last_updated: 2025-10-23
 tags: [ssot, governance, documentation, data-contracts, policies]
 summary: "Single Source of Truth principle for maintaining authoritative, consistent documentation and canonical definitions."
-sources: []
+sources:
+  - { id: R1, title: "Single source of truth - Wikipedia", url: "https://en.wikipedia.org/wiki/Single_source_of_truth", accessed: "2025-10-23" }
+  - { id: R2, title: "The Twelve-Factor App - III. Config", url: "https://12factor.net/config", accessed: "2025-10-23" }
+  - { id: R3, title: "Documentation as Code - Write the Docs", url: "https://www.writethedocs.org/guide/docs-as-code/", accessed: "2025-10-23" }
 ---
 
 # SSOT.md Guide (Single Source of Truth)
@@ -563,12 +566,21 @@ tests/auth.test.ts validates this matches SSOT.md
 
 ## Further Resources
 
-- [Single Source of Truth - Wikipedia](https://en.wikipedia.org/wiki/Single_source_of_truth)
+- [Single Source of Truth - Wikipedia](https://en.wikipedia.org/wiki/Single_source_of_truth) [R1]
+- [The Twelve-Factor App](https://12factor.net/) [R2] - Configuration and environment management
+- [Write the Docs - Documentation as Code](https://www.writethedocs.org/guide/docs-as-code/) [R3]
 - Data governance best practices
 - Documentation architecture patterns
 
+## References
+
+- [R1] [Single source of truth - Wikipedia](https://en.wikipedia.org/wiki/Single_source_of_truth) - Foundational SSOT concept and principles
+- [R2] [The Twelve-Factor App - III. Config](https://12factor.net/config) - Configuration management and single source principles for cloud-native applications
+- [R3] [Documentation as Code - Write the Docs](https://www.writethedocs.org/guide/docs-as-code/) - Version-controlled documentation practices
+
 ## Update Log
 
+- 2025-10-23: Added official references (Wikipedia, Twelve-Factor App, Write the Docs) for SSOT principles and documentation best practices.
 - 2025-10-20: Published the initial edition (organized around SSOT principles and real-world AI-assisted development practices).
 
 ---

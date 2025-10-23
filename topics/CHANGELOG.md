@@ -5,7 +5,11 @@ status: living
 last_updated: 2025-10-23
 tags: [changelog, versioning, releases, documentation, semver]
 summary: "Keep a Changelog format for maintaining transparent, human-readable project version history and release notes."
-sources: []
+sources:
+  - { id: R1, title: "Keep a Changelog 1.1.0", url: "https://keepachangelog.com/en/1.1.0/", accessed: "2025-10-23" }
+  - { id: R2, title: "Semantic Versioning 2.0.0", url: "https://semver.org/spec/v2.0.0.html", accessed: "2025-10-23" }
+  - { id: R3, title: "Openchangelog Documentation", url: "https://openchangelog.com/docs", accessed: "2025-10-23" }
+  - { id: R4, title: "Common Changelog", url: "https://common-changelog.org/", accessed: "2025-10-23" }
 ---
 
 # CHANGELOG.md Guide
@@ -350,13 +354,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Further Resources
 
-- [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/)
-- [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html)
-- [Openchangelog Documentation](https://openchangelog.com/docs)
-- [Common Changelog](https://common-changelog.org/) - Alternative format
+- [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) [R1]
+- [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) [R2]
+- [Openchangelog Documentation](https://openchangelog.com/docs) [R3]
+- [Common Changelog](https://common-changelog.org/) [R4] - Alternative format
+
+## References
+
+- [R1] [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/) - Official Keep a Changelog specification and guidelines
+- [R2] [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) - SemVer specification for version numbering
+- [R3] [Openchangelog Documentation](https://openchangelog.com/docs) - Optional automation tool for changelog distribution
+- [R4] [Common Changelog](https://common-changelog.org/) - Alternative changelog format specification
 
 ## Update Log
 
+- 2025-10-23: Added official references (Keep a Changelog, Semantic Versioning, Openchangelog, Common Changelog) for changelog best practices and versioning standards.
 - 2025-10-20: Published the initial edition (aligned with Keep a Changelog 1.1.0 and community operating practices).
 
 ---
