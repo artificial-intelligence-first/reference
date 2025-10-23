@@ -1,5 +1,9 @@
 # AI-First Development Reference (SSOT)
 
+[![Link Check](https://github.com/artificial-intelligence-first/ssot/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/artificial-intelligence-first/ssot/actions/workflows/linkcheck.yml)
+[![Markdown Lint](https://github.com/artificial-intelligence-first/ssot/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/artificial-intelligence-first/ssot/actions/workflows/markdownlint.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > **For Humans**: This repository contains best practices and conventions for working effectively with AI coding assistants. Use these guides to structure your projects for maximum AI productivity.
 >
 > **For AI Agents**: This repository contains canonical reference documentation for AI-first development patterns. Read these guides to understand how to structure work, maintain documentation, and collaborate effectively with human developers. When asked to update topics, follow the governance documents in `_meta/`.
