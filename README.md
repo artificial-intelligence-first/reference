@@ -54,7 +54,8 @@ ssot/
 │   │   ├── agent-kit.md               # AgentKit framework concepts
 │   │   └── codex.md                   # Code generation patterns
 │   ├── anthropic/                     # Anthropic-specific guides
-│   │   └── claude-code.md             # Claude Code agentic tool
+│   │   ├── claude-code.md             # Claude Code agentic tool
+│   │   └── claude-agent-sdk.md        # Claude Agent SDK
 │   └── google/                        # Google-specific guides
 │       └── a2a.md                     # Agent2Agent protocol
 ├── _meta/                             # Governance & style guides
@@ -243,6 +244,23 @@ ssot/
 **Use when**: Building features rapidly, refactoring code, automating development tasks, integrating AI assistance into Git workflows and CI/CD pipelines.
 
 **Availability**: CLI (macOS, Linux, Windows), Web (claude.ai/code), Mobile (iOS preview)
+
+---
+
+### [Claude Agent SDK](platforms/anthropic/claude-agent-sdk.md)
+**SDK for building custom AI agents**
+
+- Programmatic access to Claude Code infrastructure
+- Async streaming API with full agent capabilities
+- Custom tools as in-process MCP servers
+- Fine-grained tool permissions and security controls
+- Automatic context management (compact feature)
+- External MCP server integration
+- Python 3.10+ and TypeScript support
+
+**Use when**: Building custom autonomous agents, integrating agents into applications, extending beyond coding use cases (research, data analysis, workflow automation).
+
+**Powers**: Claude Code CLI and web interface
 
 ---
 
