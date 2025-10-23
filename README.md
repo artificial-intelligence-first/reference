@@ -53,6 +53,8 @@ ssot/
 │   │   ├── agents-sdk.md              # Responses API patterns
 │   │   ├── agent-kit.md               # AgentKit framework concepts
 │   │   └── codex.md                   # Code generation patterns
+│   ├── anthropic/                     # Anthropic-specific guides
+│   │   └── claude-code.md             # Claude Code agentic tool
 │   └── google/                        # Google-specific guides
 │       └── a2a.md                     # Agent2Agent protocol
 ├── _meta/                             # Governance & style guides
@@ -225,6 +227,25 @@ ssot/
 
 ---
 
+## Anthropic
+
+### [Claude Code](platforms/anthropic/claude-code.md)
+**Agentic coding tool for terminal and web**
+
+- Natural language development workflow
+- Direct file editing, command execution, and Git integration
+- Custom slash commands for repeated workflows
+- MCP integration for extended capabilities
+- GitHub Actions for automated code assistance
+- Headless mode for CI/CD integration
+- Supports Opus 4.1, Sonnet 4.5, Haiku 3.5 models
+
+**Use when**: Building features rapidly, refactoring code, automating development tasks, integrating AI assistance into Git workflows and CI/CD pipelines.
+
+**Availability**: CLI (macOS, Linux, Windows), Web (claude.ai/code), Mobile (iOS preview)
+
+---
+
 ## Google
 
 ### [Agent2Agent (A2A) Protocol](platforms/google/a2a.md)
@@ -246,7 +267,7 @@ ssot/
 ### Future Platforms
 
 Planned additions:
-- **`platforms/anthropic/`** - Claude API, prompt caching, extended context
+- **`platforms/anthropic/`** - Claude API, prompt caching, extended context (additional guides)
 - **`platforms/google/`** - Gemini API, Vertex AI, multimodal patterns (additional guides)
 - **`platforms/microsoft/`** - Azure OpenAI, Copilot integration
 
