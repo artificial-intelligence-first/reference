@@ -5,7 +5,16 @@ status: living
 last_updated: 2025-10-23
 tags: [plans, execplans, project-management, documentation, workflow]
 summary: "ExecPlan workflow for documenting and tracking complex, multi-step development initiatives."
-sources: []
+sources:
+  - title: "OpenAI Cookbook - Exec Plans"
+    url: "https://cookbook.openai.com/articles/codex_exec_plans"
+    type: "official"
+  - title: "Agile User Stories"
+    url: "https://www.mountaingoatsoftware.com/agile/user-stories"
+    type: "best-practice"
+  - title: "Architecture Decision Records (ADR)"
+    url: "https://adr.github.io/"
+    type: "reference"
 ---
 
 # PLANS.md Guide (ExecPlans)
@@ -494,12 +503,21 @@ Keep Progress, Surprises & Discoveries, Decision Log, and Outcomes & Retrospecti
 
 ## Further Resources
 
-- [OpenAI Cookbook: ExecPlans](https://cookbook.openai.com/articles/codex_exec_plans)
+- [OpenAI Cookbook: ExecPlans](https://cookbook.openai.com/articles/codex_exec_plans) [R1]
+- [Agile User Stories](https://www.mountaingoatsoftware.com/agile/user-stories) [R2] - Task decomposition patterns
+- [Architecture Decision Records](https://adr.github.io/) [R3] - Decision documentation best practices
 - Community examples and adaptations
 - Integration with project management tools
 
+## References
+
+- [R1] [OpenAI Cookbook - Exec Plans](https://cookbook.openai.com/articles/codex_exec_plans) - Original ExecPlan pattern and workflow documentation
+- [R2] [Agile User Stories - Mountain Goat Software](https://www.mountaingoatsoftware.com/agile/user-stories) - Task decomposition and planning techniques
+- [R3] [Architecture Decision Records (ADR)](https://adr.github.io/) - Decision documentation patterns and templates
+
 ## Update Log
 
+- 2025-10-23: Added official references (OpenAI Cookbook, Agile User Stories, ADR) for ExecPlan patterns and decision documentation.
 - 2025-10-20: Published the initial edition (summarizing community examples and the OpenAI Cookbook ExecPlan article).
 
 ---
