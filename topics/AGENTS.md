@@ -5,7 +5,17 @@ status: living
 last_updated: 2025-10-23
 tags: [agents, conventions, documentation, development, ai-first]
 summary: "AGENTS.md convention for structuring AI-agent-friendly operational documentation in repositories."
-sources: []
+sources:
+  - title: "openai/agents.md GitHub Repository"
+    url: "https://github.com/openai/agents.md"
+    type: "official-spec"
+  - title: "AGENTS.md Official Website"
+    url: "https://agents.md"
+    type: "documentation"
+  - title: "DeepWiki: openai/agents.md Documentation"
+    url: "https://deepwiki.com/openai/agents.md"
+    type: "community"
+    accessed: "2025-10-23"
 ---
 
 # AGENTS.md Guide
@@ -16,14 +26,32 @@ sources: []
 
 ## Overview
 
-AGENTS.md is a Markdown convention introduced by OpenAI and partner teams to provide AI coding agents with a predictable, machine-focused playbook. It is increasingly adopted across the AI tooling community and is recognized by major agent platforms including:
+AGENTS.md is a Markdown convention introduced by OpenAI and partner teams to provide AI coding agents with a predictable, machine-focused playbook. The format has been adopted by **over 20,000 open-source repositories** and is recognized by major agent platforms.
 
-- OpenAI Codex
-- Cursor
-- VS Code with AI extensions
-- And other AI-assisted development tools
+### Official Partners and Contributors
 
-**Key Purpose**: Give AI agents the operational knowledge they need to edit and validate code safely without relying solely on human-facing documentation.
+The AGENTS.md specification was developed collaboratively by:
+
+- **OpenAI** - Codex platform [R1]
+- **Cursor** - AI-first code editor [R2]
+- **Google** - Jules coding agent [R3]
+- **Amp** - AI development platform [R4]
+- **Factory** - AI software development [R5]
+
+### Supported AI Coding Tools
+
+Major agent platforms that recognize and consume AGENTS.md files:
+
+- **OpenAI Codex** - Code generation and completion
+- **Cursor** - AI-first code editor with native AGENTS.md support
+- **Jules** (Google) - Google's AI coding agent
+- **Amp** - AI-powered development workflows
+- **Factory** - Autonomous software engineering
+- **RooCode** - AI coding assistant
+- **VS Code AI Extensions** - Growing ecosystem support
+- **Custom Agents** - Extensible to bespoke implementations
+
+**Key Purpose**: Give AI agents the operational knowledge they need to edit and validate code safely without relying solely on human-facing documentation. [R1]
 
 ## Core Principles
 
@@ -32,7 +60,19 @@ AGENTS.md is a Markdown convention introduced by OpenAI and partner teams to pro
 - Place `AGENTS.md` at the repository root
 - Large monorepos may include nested `AGENTS.md` files for specific subsystems
 - Agents read the closest (most specific) instructions when multiple files exist
-- Explicit user prompts override file guidance
+- Explicit user prompts override file guidance [R6]
+
+**File Specifications**: [R6]
+- **File name**: Exactly `AGENTS.md` (case-sensitive)
+- **Encoding**: UTF-8
+- **Format**: Standard Markdown (.md)
+- **Line endings**: Unix-style LF preferred
+
+**Precedence Hierarchy** (highest to lowest): [R6]
+1. Explicit user chat prompts
+2. Closest AGENTS.md to edited file
+3. Parent directory AGENTS.md files
+4. Root project AGENTS.md
 
 ### 2. Content Structure
 
@@ -104,6 +144,9 @@ AGENTS.md typically includes sections covering:
 3. **Test instructions** - Verify that agents can successfully follow the guidance
 4. **Link to details** - Reference deeper documentation when needed
 5. **Version control** - Track changes to understand evolution of practices
+6. **Use imperative language** - Write direct commands ("Run test", "Check file") rather than suggestions ("You might want to...") [R6]
+7. **Focus on actionable steps** - Provide concrete procedures over conceptual explanations [R6]
+8. **Include context switching** - For monorepos, specify navigation commands between packages [R6]
 
 ### For AI Agents Reading This
 
@@ -112,6 +155,26 @@ AGENTS.md typically includes sections covering:
 3. **Follow instructions literally** unless explicitly overridden by the user
 4. **Report ambiguities** back to users rather than guessing
 5. **Reference specific sections** when explaining your actions
+6. **Execute commands as specified** - When testing commands are listed, run them automatically [R6]
+7. **Respect precedence hierarchy** - User prompts override file instructions [R6]
+
+### Anti-Patterns to Avoid
+
+**❌ Overly verbose explanations**: [R6]
+- Agents need concise, actionable instructions, not educational content
+- Save detailed "why" explanations for README.md
+
+**❌ Outdated command references**:
+- Ensure commands reference current package managers and tools
+- Stale instructions reduce agent effectiveness
+
+**❌ Human-centric language**:
+- Avoid: "Please remember to run tests"
+- Prefer: "Run `npm test` before committing"
+
+**❌ Missing monorepo context**:
+- Include workspace navigation commands
+- Specify package filtering (e.g., `--filter <package-name>`)
 
 ## Sample Workflow: pnpm + Turborepo + Vite
 
@@ -166,10 +229,22 @@ AGENTS.md typically includes sections covering:
 ## Tool Support
 
 ### OpenAI Code Generation Models
-The latest OpenAI code generation models (e.g., GPT-4.1 Code, GPT-4.1 Mini) can rely on AGENTS.md to understand repository-specific procedures. Review each model’s documentation to confirm the most recent behavior.
+The latest OpenAI code generation models (e.g., GPT-4.1 Code, GPT-4.1 Mini) can rely on AGENTS.md to understand repository-specific procedures. Review each model's documentation to confirm the most recent behavior. [R1]
 
 ### Cursor
-Cursor treats AGENTS.md as the project-specific workflow guide.
+Cursor treats AGENTS.md as the project-specific workflow guide with native format support. [R2]
+
+### Jules (Google)
+Google's Jules coding agent natively consumes AGENTS.md for project-specific context. [R3]
+
+### Amp
+Amp integrates AGENTS.md into its AI-powered development workflows. [R4]
+
+### Factory
+Factory's autonomous software engineering platform uses AGENTS.md for operational guidance. [R5]
+
+### RooCode
+RooCode AI coding assistant supports AGENTS.md format for project instructions. [R6]
 
 ### VS Code AI Extensions
 AI-assisted extensions for VS Code increasingly ingest AGENTS.md as contextual guidance.
@@ -177,7 +252,37 @@ AI-assisted extensions for VS Code increasingly ingest AGENTS.md as contextual g
 ### Custom Agents
 For bespoke agents, implement an AGENTS.md parser so they inherit standard operating procedures.
 
-> **Support Note**: Compatibility may change—review each tool’s release notes regularly.
+> **Support Note**: Compatibility may change—review each tool's release notes regularly.
+
+## Real-World Examples
+
+The AGENTS.md format has been adopted across diverse technology stacks and project types. Notable implementations include: [R6]
+
+### Notable Open-Source Projects
+
+**openai/codex** (Rust) [R6]
+- General-purpose CLI tooling for AI coding agents
+- Cargo commands, clippy rules, and Rust-specific workflows
+
+**apache/airflow** (Python) [R6]
+- Platform to programmatically author, schedule, and monitor workflows
+- pip install procedures, pytest patterns, mypy configuration
+
+**temporalio/sdk-java** (Java) [R6]
+- Java SDK for Temporal workflow orchestration
+- Maven/Gradle setup, JUnit testing patterns
+
+**PlutoLang/Pluto** (C++) [R6]
+- Superset of Lua 5.4 focused on general-purpose programming
+- CMake build system, compiler flag specifications
+
+### Adoption Patterns
+
+Projects using AGENTS.md span:
+- **Monorepo architectures** with nested configuration
+- **Single-package applications** with focused instructions
+- **Library/SDK projects** with API usage examples
+- **Infrastructure tools** with deployment workflows
 
 ## Conflict Resolution
 
@@ -187,6 +292,42 @@ When guidance conflicts arise:
 2. **User commands override** - Explicit user instructions take precedence over file guidance
 3. **Newer over older** - Within the same file, later sections clarify earlier ones
 4. **Explicit over implicit** - Direct commands override general principles
+
+## Frequently Asked Questions
+
+### Are there required fields?
+
+No. AGENTS.md uses standard Markdown without mandatory structure. The format is intentionally flexible—use sections that make sense for your project. [R6]
+
+### What if instructions conflict?
+
+The system uses proximity-based precedence: [R6]
+- File closest to edited code wins
+- User prompts override all file-based instructions
+- Nested AGENTS.md files override parent directory files
+
+### Will the agent run testing commands automatically?
+
+Yes, when commands are explicitly listed in AGENTS.md (e.g., "Run `npm test` before committing"), agents will typically execute them as part of their workflow. [R6]
+
+### Can I update it later?
+
+Absolutely. Treat AGENTS.md as **living documentation** that evolves with your project. Update it whenever workflows change, new tools are adopted, or best practices are refined. [R6]
+
+### How do I migrate existing docs to AGENTS.md?
+
+For backward compatibility, create a symbolic link: [R6]
+
+```bash
+mv DEVELOPMENT.md AGENTS.md
+ln -s AGENTS.md DEVELOPMENT.md
+```
+
+This preserves existing references while adopting the standard format.
+
+### What about monorepos?
+
+Use nested AGENTS.md files for each package or subsystem. Agents will prioritize the closest file to the code they're editing. [R6]
 
 ## Adoption Checklist
 
@@ -212,11 +353,22 @@ When guidance conflicts arise:
 
 - [OpenAI AGENTS.md Specification](https://agents.md)
 - [GitHub Repository](https://github.com/openai/agents.md)
+- [DeepWiki Documentation](https://deepwiki.com/openai/agents.md)
 - Growing collection of community examples
 - Industry coverage and adoption case studies
 
+## References
+
+- [R1] [OpenAI AGENTS.md Official Website](https://agents.md) - Official specification and documentation
+- [R2] [Cursor](https://cursor.com) - AI-first code editor with native AGENTS.md support
+- [R3] [Jules - Google](https://jules.google) - Google's AI coding agent platform
+- [R4] [Amp](https://ampcode.com) - AI-powered development platform
+- [R5] [Factory](https://factory.ai) - Autonomous software engineering platform
+- [R6] [DeepWiki: openai/agents.md](https://deepwiki.com/openai/agents.md) - Comprehensive community documentation and implementation examples (Accessed: 2025-10-23)
+
 ## Update Log
 
+- 2025-10-23: Added comprehensive information from DeepWiki including official partners, 20k+ repository adoption statistics, real-world examples, FAQ section, and detailed file specifications.
 - 2025-10-20: Published the initial edition (reassembled from community practices and the public specification).
 
 ---
