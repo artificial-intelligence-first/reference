@@ -44,9 +44,9 @@ The `sdk/` directory captures three complementary ways to build with OpenAI toda
 
 ## Documentation Map
 
-- **[Agent_Kit.md](Agent_Kit.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
-- **[Agents_SDK.md](Agents_SDK.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
-- **[Codex-SDK.md](Codex-SDK.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
+- **[agent-kit.md](openai/agent-kit.md)** – conceptual scaffolding, memory models, safety guardrails (marked as *Sample* wherever APIs are hypothetical).
+- **[agents-sdk.md](openai/agents-sdk.md)** – Python/TypeScript usage of `openai` SDK (`client.responses.create`, tool calling, streaming).
+- **[codex.md](openai/codex.md)** – modern code-assistance flows plus legacy Codex notes, performance tuning, and editor integration.
 
 Each guide flags historical content with “Legacy” callouts and links back to the official platform documentation.
 

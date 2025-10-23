@@ -18,5 +18,8 @@ https://deepmind.google/research/publications/90773/
 # Exclude agents.md which is a domain that may not respond to link checkers
 https://agents.md
 
+# Exclude OpenAI platform docs (strict bot protection, returns 403)
+https://platform.openai.com/
+
 # Exclude arXiv URLs (they often block automated checks)
 https://arxiv.org/
