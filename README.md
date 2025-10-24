@@ -264,6 +264,23 @@ ssot/
 
 ---
 
+### [Petri](platforms/anthropic/petri.md)
+**Open-source automated auditing framework for AI safety research**
+
+- AI agents test target models across diverse scenarios
+- Multi-turn conversation testing with simulated users and tools
+- Automated scoring across safety risk categories (deception, sycophancy, power-seeking, refusal failure)
+- Built on UK AISI's Inspect framework
+- Supports major model API providers
+- Ships with 111 seed instructions, runs in minutes
+- Detects misaligned behaviors: autonomous deception, oversight subversion, whistleblowing
+
+**Use when**: Evaluating AI model safety, testing for risky behaviors, conducting AI safety research, validating model alignment, automating model auditing, comparing safety across models.
+
+**Powers**: Claude 4 and Claude Sonnet 4.5 System Cards, OpenAI collaboration for reward hacking detection
+
+---
+
 ## Google
 
 ### [Agent2Agent (A2A) Protocol](platforms/google/a2a.md)
