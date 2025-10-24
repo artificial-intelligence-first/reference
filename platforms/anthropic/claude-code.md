@@ -2,14 +2,15 @@
 title: Claude Code
 slug: claude-code
 status: living
-last_updated: 2025-10-23
-tags: [code-generation, agents, anthropic, cli, best-practices]
+last_updated: 2025-10-24
+tags: [code-generation, agents, anthropic, cli, best-practices, vscode]
 summary: "Agentic coding tool from Anthropic that lives in your terminal, understands your codebase, and helps you code faster through natural language commands."
 sources:
-  - { id: R1, title: "Claude Code Official Site", url: "https://www.anthropic.com/claude-code", accessed: "2025-10-23" }
-  - { id: R2, title: "Claude Code GitHub Repository", url: "https://github.com/anthropics/claude-code", accessed: "2025-10-23" }
-  - { id: R3, title: "Anthropic Cookbook", url: "https://github.com/anthropics/anthropic-cookbook", accessed: "2025-10-23" }
-  - { id: R4, title: "Claude Code Best Practices", url: "https://www.anthropic.com/engineering/claude-code-best-practices", accessed: "2025-10-23" }
+  - { id: R1, title: "Claude Code Official Site", url: "https://www.anthropic.com/claude-code", accessed: "2025-10-24" }
+  - { id: R2, title: "Claude Code GitHub Repository", url: "https://github.com/anthropics/claude-code", accessed: "2025-10-24" }
+  - { id: R3, title: "Anthropic Cookbook", url: "https://github.com/anthropics/anthropic-cookbook", accessed: "2025-10-24" }
+  - { id: R4, title: "Claude Code Best Practices", url: "https://www.anthropic.com/engineering/claude-code-best-practices", accessed: "2025-10-24" }
+  - { id: R5, title: "Enabling Claude Code to work more autonomously", url: "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously", accessed: "2025-10-24" }
 ---
 
 # Claude Code
@@ -27,6 +28,7 @@ sources:
 - [TL;DR](#tldr)
 - [Canonical Definitions](#canonical-definitions)
 - [Core Patterns](#core-patterns)
+- [Advanced Features (September 2025)](#advanced-features-september-2025)
 - [Decision Checklist](#decision-checklist)
 - [Anti-patterns / Pitfalls](#anti-patterns--pitfalls)
 - [Evaluation](#evaluation)
@@ -367,6 +369,107 @@ fi
 
 ---
 
+## Advanced Features (September 2025)
+
+### Checkpoints: Autonomous Operation with Safety [R5]
+
+Claude Code now automatically saves code state before each change, enabling instant rollback to previous versions.
+
+**Key Capabilities**:
+- **Automatic state saving**: Every change creates a checkpoint
+- **Quick rollback**: Press Esc twice or use `/rewind` command
+- **Safe experimentation**: Try changes without fear of breaking code
+
+**Usage**:
+```bash
+# Claude Code automatically creates checkpoints
+
+# To rewind to previous state:
+# Press: Esc + Esc
+# Or type: /rewind
+
+# To rewind to specific checkpoint:
+/rewind 3  # Go back 3 changes
+```
+
+**Benefits**:
+- Enables more autonomous operation
+- Reduces risk of irreversible changes
+- Faster iteration cycles
+
+**Sources**: [R5]
+
+### VS Code Extension [R5]
+
+Native VS Code extension brings Claude Code directly into your IDE.
+
+**Features**:
+- Integrated Claude Code interface within VS Code
+- Access to full Claude Code capabilities
+- Seamless workflow without switching contexts
+
+**Installation**:
+```bash
+# Install from VS Code marketplace
+code --install-extension anthropic.claude-code
+```
+
+**Sources**: [R5]
+
+### Terminal v2.0 [R5]
+
+Updated terminal interface with improved usability and features.
+
+**New Features**:
+- **Improved status visibility**: Clearer indication of Claude Code's current state
+- **Searchable prompt history**: Press Ctrl+r to search previous commands
+- **Better error messages**: More informative feedback
+
+**Usage**:
+```bash
+# Search command history
+Ctrl+r  # then type to search
+
+# Navigate through history
+Up/Down arrows
+```
+
+**Sources**: [R5]
+
+### Plugin System [R5]
+
+Extend Claude Code with custom commands, agents, hooks, and MCP servers.
+
+**Capabilities**:
+- **Custom commands**: Add domain-specific workflows
+- **Custom agents**: Build specialized AI assistants
+- **Hooks**: Intercept and modify Claude Code behavior
+- **MCP servers**: Connect to external tools and services
+
+**Example Plugin Structure**:
+```
+.claude/
+├── commands/          # Custom slash commands
+├── plugins/           # Plugin modules
+│   ├── my-plugin/
+│   │   ├── config.yml
+│   │   └── index.js
+└── mcp-servers/       # MCP server configurations
+```
+
+**Sources**: [R5]
+
+### Default Model: Claude Sonnet 4.5 [R5]
+
+Claude Sonnet 4.5 is now the default model for Claude Code, offering improved:
+- Code understanding and generation
+- Multi-file refactoring capabilities
+- Context awareness across large codebases
+
+**Sources**: [R5]
+
+---
+
 ## Decision Checklist
 
 Use Claude Code when:
@@ -636,6 +739,11 @@ git diff main...feature-branch
 ---
 
 ## Update Log
+
+### 2025-10-24
+- **Added**: September 2025 autonomous operation features: Checkpoints, VS Code extension, Terminal v2.0, and plugin system details
+- **Updated**: Default model information (Claude Sonnet 4.5)
+- **Sources**: [R5]
 
 ### 2025-10-23
 - **Initial version**: Comprehensive Claude Code documentation
