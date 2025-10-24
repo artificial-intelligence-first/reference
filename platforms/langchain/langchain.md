@@ -407,7 +407,7 @@ parallel_chain = RunnableParallel(
 
 ## Decision Checklist
 
-### Use LangChain when:
+### Use LangChain when
 
 - ✅ Building LLM-powered applications requiring structured workflows
 - ✅ Need extensive integrations with LLM providers, vector databases, or tools
@@ -419,7 +419,7 @@ parallel_chain = RunnableParallel(
 - ✅ Need observability and evaluation tools (LangSmith)
 - ✅ Building prototypes that may scale to production
 
-### Consider alternatives when:
+### Consider alternatives when
 
 - ❌ Building simple LLM API calls without complex workflows
 - ❌ Extremely latency-sensitive applications (framework overhead)

@@ -672,7 +672,7 @@ asyncio.run(run_with_streaming())
 
 ## Decision Checklist
 
-### Use LangGraph when:
+### Use LangGraph when
 
 - ✅ Building multi-agent systems with complex coordination
 - ✅ Need conditional branching based on agent decisions or tool outputs
@@ -685,7 +685,7 @@ asyncio.run(run_with_streaming())
 - ✅ Need fine-grained control over agent orchestration
 - ✅ Require streaming of intermediate results
 
-### Use LangChain instead when:
+### Use LangChain instead when
 
 - ✅ Building simple sequential chains without complex branching
 - ✅ Prototyping quickly without advanced orchestration needs
@@ -693,7 +693,7 @@ asyncio.run(run_with_streaming())
 - ✅ Need basic conversational agents with memory
 - ✅ Team is new to agent development (easier learning curve)
 
-### Consider alternatives when:
+### Consider alternatives when
 
 - ❌ Need orchestration in languages other than Python/JavaScript
 - ❌ Working with traditional workflow engines (Airflow, Prefect more suitable)
