@@ -35,7 +35,12 @@ Tags are organized by category. Each tag includes:
 ### tool-calling
 **Definition**: Enabling AI models to invoke external functions, APIs, or tools
 **Synonyms**: function-calling, tool-use, api-integration
-**Related**: agents, integrations, apis
+**Related**: agents, integrations, apis, mcp
+
+### mcp
+**Definition**: Model Context Protocol - open standard for connecting LLM applications to external data and tools
+**Synonyms**: model-context-protocol
+**Related**: tool-calling, protocols, integrations, apis
 
 ### planning
 **Definition**: Task decomposition, goal setting, and execution strategies for AI systems
@@ -99,6 +104,20 @@ Tags are organized by category. Each tag includes:
 **Definition**: Training or adapting models on custom datasets
 **Synonyms**: training, model-adaptation, custom-models
 **Related**: evaluation, datasets, optimization
+
+---
+
+## Protocols & Standards
+
+### protocols
+**Definition**: Communication standards and specifications for system interoperability
+**Synonyms**: standards, specifications, communication-protocols
+**Related**: apis, integrations, mcp
+
+### integrations
+**Definition**: Connecting and combining multiple systems, tools, or platforms
+**Synonyms**: integration, connectivity, interoperability
+**Related**: apis, protocols, tool-calling, mcp
 
 ---
 
@@ -325,6 +344,11 @@ During quarterly audits:
 
 ## Update Log
 
+### 2025-10-24
+- **Added**: New category "Protocols & Standards" with `protocols` and `integrations` tags
+- **Added**: `mcp` tag for Model Context Protocol
+- **Updated**: Related tags for tool-calling to include mcp reference
+
 ### 2025-10-23
 - **Initial version**: Established canonical tags across 7 categories
 - **Added**: 50+ tags with definitions and relationships
@@ -333,4 +357,4 @@ During quarterly audits:
 ---
 
 **Document ID**: `_meta/TAXONOMY`
-**Last Updated**: 2025-10-23
+**Last Updated**: 2025-10-24

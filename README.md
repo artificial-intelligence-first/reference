@@ -21,6 +21,7 @@ A **Single Source of Truth (SSOT)** for AI-first development knowledge.
 - [Repository Structure](#repository-structure)
 - [Core Topics](#core-topics)
 - [Engineering Guides](#engineering-guides)
+- [Tools & Protocols](#tools--protocols)
 - [Platform References](#platform-references)
 - [Governance](#governance)
 - [Quick Start](#quick-start)
@@ -47,6 +48,9 @@ ssot/
 │   ├── README.md                      # Engineering guides overview
 │   ├── context.md                     # Context engineering patterns
 │   └── prompt.md                      # Prompt engineering patterns
+├── tools/                             # AI development tools & protocols
+│   ├── README.md                      # Tools and protocols overview
+│   └── mcp.md                         # Model Context Protocol guide
 ├── platforms/                         # Platform-specific implementations
 │   ├── README.md                      # Platform guides overview
 │   ├── openai/                        # OpenAI-specific guides
@@ -81,6 +85,7 @@ ssot/
 **Design Philosophy**:
 - **`topics/`** - Core AI-first development conventions (1 topic = 1 file)
 - **`engineering/`** - Deep technical methodologies (context, prompting)
+- **`tools/`** - Cross-platform tools and communication protocols
 - **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google, LangChain)
 - **`_meta/`** - How to maintain this repository
 - **`_templates/`** - Scaffolding for new content
@@ -183,6 +188,25 @@ ssot/
 **Use when**: Designing effective prompts, troubleshooting AI outputs, optimizing for specific platforms, establishing prompt standards.
 
 **Sources**: Anthropic, Google Vertex AI, OpenAI, DeepMind
+
+---
+
+## Tools & Protocols
+
+### [Model Context Protocol (MCP)](tools/mcp.md)
+**Open standard for connecting LLM applications to external data sources and tools**
+
+- Client-server architecture using JSON-RPC 2.0
+- Five core primitives: Prompts, Resources, Tools, Roots, Sampling
+- Official SDKs: Python, TypeScript, C#, Java, Go
+- Pre-built servers for GitHub, PostgreSQL, Google Drive, Slack, Puppeteer
+- Security considerations and vulnerability mitigation
+- Integration with Claude Desktop, OpenAI Agents SDK, custom applications
+
+**Use when**: Building AI applications requiring standardized external data access, creating reusable tool integrations across multiple AI platforms, implementing secure bidirectional AI-to-system communication.
+
+**Introduced**: November 2024 by Anthropic
+**Adopted by**: OpenAI (March 2025), Microsoft, Google
 
 ---
 
@@ -395,9 +419,10 @@ Planned additions:
 
 1. **Start with [AGENTS.md](topics/AGENTS.md)** - Understand the foundational convention
 2. **Review [SSOT.md](topics/SSOT.md)** - Learn about canonical documentation
-3. **Explore [platforms/README.md](platforms/README.md)** - If integrating specific AI platforms
-4. **Consult [engineering/README.md](engineering/README.md)** - When planning context or prompt strategies
-5. **Read [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md)** - If you plan to contribute
+3. **Check [tools/README.md](tools/README.md)** - If working with AI integration protocols
+4. **Explore [platforms/README.md](platforms/README.md)** - If integrating specific AI platforms
+5. **Consult [engineering/README.md](engineering/README.md)** - When planning context or prompt strategies
+6. **Read [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md)** - If you plan to contribute
 
 ### For AI Agents
 
@@ -482,6 +507,7 @@ See [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md) for detailed AI interaction p
 
 ### Platform Integration
 
+- **[Model Context Protocol](tools/mcp.md)** - Implement standardized tool integrations
 - **[OpenAI Agents SDK](platforms/openai/agents-sdk.md)** - Implement OpenAI agents
 - **[OpenAI AgentKit](platforms/openai/agent-kit.md)** - Design agent frameworks
 - **[OpenAI Code Generation](platforms/openai/codex.md)** - Build code assistance
@@ -577,5 +603,5 @@ This repository synthesizes best practices from:
 ---
 
 **Repository Maintainer**: AI-First Development Team
-**Last Updated**: 2025-10-23
+**Last Updated**: 2025-10-24
 **Canonical URL**: `https://github.com/artificial-intelligence-first/ssot`
