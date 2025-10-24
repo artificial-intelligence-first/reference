@@ -444,7 +444,7 @@ Avoid these prompt engineering mistakes:
 ### Research and Tutorials
 - Anthropic Interactive Tutorial: [GitHub Repository](https://github.com/anthropics/prompt-eng-interactive-tutorial)
 - DeepMind Research on Prompting: Papers 83400, 90773
-- OpenAI Codex Cookbook: [Examples](https://cookbook.openai.com/)
+- OpenAI Codex Cookbook: [Examples](https://cookbook.openai.com/examples/gpt-5-codex_prompting_guide)
 
 ### Related Documentation
 - `engineering/prompt.md` - Vendor-specific prompt engineering notes
