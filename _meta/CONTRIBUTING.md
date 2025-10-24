@@ -37,7 +37,7 @@ This repository maintains one topic per file with the following principles:
 ### Workflow: Human-Initiated
 
 1. **Identify the information source** (article, documentation, research paper)
-2. **Determine the relevant topic file** (e.g., `topics/AGENTS.md`)
+2. **Determine the relevant file** (e.g., `files/AGENTS.md`)
 3. **Extract key insights** from the source
 4. **Assign a reference ID** (next available [R#])
 5. **Integrate into appropriate section** (see Section Mapping below)
@@ -51,7 +51,7 @@ This repository maintains one topic per file with the following principles:
 Provide the AI agent with a structured request:
 
 ```markdown
-Topic: topics/AGENTS.md
+File: files/AGENTS.md
 Source: https://example.com/article-title
 Key Points:
 - Agents should maintain state externally for scalability
@@ -169,10 +169,10 @@ Create a new topic file when:
 
 | Topic Type | Directory | Example |
 |------------|-----------|---------|
-| Core conventions/patterns | `topics/` | AGENTS.md, SSOT.md |
+| Core conventions/patterns | `files/` | AGENTS.md, SSOT.md |
 | Engineering methodology | `engineering/` | context.md, prompt.md |
 | Platform-specific guides | `platforms/{vendor}/` | openai/agents-sdk.md |
-| Cross-cutting patterns | `topics/` or new category | rate-limiting.md |
+| Cross-cutting patterns | `files/` or new category | rate-limiting.md |
 
 ---
 
@@ -375,7 +375,7 @@ npx markdown-link-check $(find . -name "*.md")
 
 ```markdown
 **User Request:**
-"Add this blog post to AGENTS.md: https://example.com/stateless-agents"
+"Add this blog post to files/AGENTS.md: https://example.com/stateless-agents"
 
 **AI Workflow:**
 1. Fetch and analyze blog post
@@ -390,7 +390,7 @@ npx markdown-link-check $(find . -name "*.md")
 6. Update frontmatter sources array
 7. Add to Update Log:
    - **Added**: Stateless design pattern with Redis example [R7]
-8. Commit: docs(topics/agents): add stateless pattern from Example Blog [R7]
+8. Commit: docs(files/agents): add stateless pattern from Example Blog [R7]
 ```
 
 ### Scenario 2: Conflicting Information
@@ -442,7 +442,7 @@ New information doesn't fit existing sections
 
 - Check `_meta/STYLE.md` for formatting questions
 - Check `_meta/TAXONOMY.md` for tag questions
-- Check existing topics for structural examples
+- Check existing files for structural examples
 - Open an issue using `.github/ISSUE_TEMPLATE/topic_update.md`
 
 ### Reporting Issues
@@ -482,10 +482,10 @@ docs(scope): description
 
 **Examples:**
 ```bash
-docs(topics/agents): add stateless design pattern [R7]
+docs(files/agents): add stateless design pattern [R7]
 docs(engineering/context): update retrieval strategies with Anthropic guidance
-fix(topics/ssot): correct broken link in references
-feat(topics): add new observability.md topic
+fix(files/ssot): correct broken link in references
+feat(files): add new observability.md file
 docs(_meta/taxonomy): add 'observability' tag
 ```
 

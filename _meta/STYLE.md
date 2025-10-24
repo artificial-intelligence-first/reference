@@ -368,13 +368,13 @@ All files should pass `markdownlint` with this configuration:
 Format: `docs(scope): description`
 
 ```bash
-docs(topics/agents): add evaluation metrics from OpenAI blog [R5]
+docs(files/agents): add evaluation metrics from OpenAI blog [R5]
 docs(engineering/context): update retrieval strategies
 docs(_meta): fix typo in STYLE.md
 ```
 
 **Scopes:**
-- `topics/*` - Topic documents
+- `files/*` - Core file documents
 - `engineering/*` - Engineering guides
 - `platforms/*` - Platform-specific docs
 - `_meta` - Governance documents

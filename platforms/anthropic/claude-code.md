@@ -758,8 +758,8 @@ git diff main...feature-branch
 ## See Also
 
 ### Prerequisites
-- [AGENTS.md](../../topics/AGENTS.md): Operational documentation for AI agents
-- [SKILL.md](../../topics/SKILL.md): Agent Skills specification for packaging domain expertise
+- [AGENTS.md](../../files/AGENTS.md): Operational documentation for AI agents
+- [SKILL.md](../../files/SKILL.md): Agent Skills specification for packaging domain expertise
 
 ### Related Topics
 - [Context Engineering](../../engineering/context.md): Managing context in AI interactions

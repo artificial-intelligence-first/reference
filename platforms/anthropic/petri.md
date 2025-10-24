@@ -1160,11 +1160,11 @@ class HybridSafetyEvaluation:
 ## See Also
 
 ### Prerequisites
-- [AGENTS.md](../../topics/AGENTS.md): Operational documentation for AI agents
-- [SSOT.md](../../topics/SSOT.md): Single Source of Truth principles for canonical definitions
+- [AGENTS.md](../../files/AGENTS.md): Operational documentation for AI agents
+- [SSOT.md](../../files/SSOT.md): Single Source of Truth principles for canonical definitions
 
 ### Related Topics
-- [SKILL.md](../../topics/SKILL.md): Agent Skills specification
+- [SKILL.md](../../files/SKILL.md): Agent Skills specification
 - [Context Engineering](../../engineering/context.md): Managing context in AI interactions
 - [Prompt Engineering](../../engineering/prompt.md): Effective prompt design patterns
 

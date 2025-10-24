@@ -1081,8 +1081,8 @@ LangGraph Studio can now run locally without a desktop app, functioning as a com
 
 ### Related Topics
 - **[LangChain](./langchain.md)** - Foundational framework for LLM applications (prerequisite for LangGraph)
-- **[AGENTS.md](../../topics/AGENTS.md)** - General agent operational documentation and conventions
-- **[PLANS.md](../../topics/PLANS.md)** - ExecPlans workflow for complex multi-session tasks
+- **[AGENTS.md](../../files/AGENTS.md)** - General agent operational documentation and conventions
+- **[PLANS.md](../../files/PLANS.md)** - ExecPlans workflow for complex multi-session tasks
 - **[Context Engineering](../../engineering/context.md)** - Best practices for context management in agents
 - **[Prompt Engineering](../../engineering/prompt.md)** - Prompt design patterns for agent instructions
 

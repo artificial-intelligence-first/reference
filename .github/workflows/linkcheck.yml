@@ -31,9 +31,10 @@ jobs:
             --timeout 60
             --max-retries 3
             --exclude-file .lycheeignore
-            "topics/**/*.md"
+            "files/**/*.md"
             "engineering/**/*.md"
             "platforms/**/*.md"
+            "tools/**/*.md"
             "_meta/**/*.md"
             "_templates/**/*.md"
             "README.md"

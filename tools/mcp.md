@@ -790,11 +790,11 @@ mcp-bench --server ./server.py --clients 10 --duration 60s
 ## See Also
 
 ### Prerequisites
-- [SSOT Principles](../topics/SSOT.md): Understand canonical data definitions before implementing MCP resources
+- [SSOT Principles](../files/SSOT.md): Understand canonical data definitions before implementing MCP resources
 - [Context Engineering](../engineering/context.md): Context retrieval patterns complement MCP resources
 
 ### Related Topics
-- [AGENTS.md](../topics/AGENTS.md): Operational documentation for AI agents using MCP
+- [AGENTS.md](../files/AGENTS.md): Operational documentation for AI agents using MCP
 - [Prompt Engineering](../engineering/prompt.md): Designing effective prompts for MCP-enabled agents
 
 ### Platform-Specific

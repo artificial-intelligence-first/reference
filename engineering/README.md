@@ -27,10 +27,10 @@
 
 ## Integration with Repository Docs
 
-- **`topics/AGENTS.md`** – Reference testing/operational procedures when updating prompt or context processes.
-- **`topics/SSOT.md`** – Record canonical terminology, schema definitions, and policy links used inside prompts/context bundles.
-- **`topics/PLANS.md`** – Capture context/prompt architecture work inside ExecPlans (decisions, surprises, validation).
-- **`topics/SKILL.md`** – When a prompt or context pattern is reusable, package it as a Skill and document triggers.
+- **`files/AGENTS.md`** – Reference testing/operational procedures when updating prompt or context processes.
+- **`files/SSOT.md`** – Record canonical terminology, schema definitions, and policy links used inside prompts/context bundles.
+- **`files/PLANS.md`** – Capture context/prompt architecture work inside ExecPlans (decisions, surprises, validation).
+- **`files/SKILL.md`** – When a prompt or context pattern is reusable, package it as a Skill and document triggers.
 - **`platforms/README.md`** – Combine these guides with SDK-specific instructions when implementing retrieval or prompt orchestration in code.
 
 ## Maintenance Tips

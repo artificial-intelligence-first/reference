@@ -19,7 +19,7 @@ A **Single Source of Truth (SSOT)** for AI-first development knowledge.
 ## Table of Contents
 
 - [Repository Structure](#repository-structure)
-- [Core Topics](#core-topics)
+- [Core Files](#core-files)
 - [Engineering Guides](#engineering-guides)
 - [Tools & Protocols](#tools--protocols)
 - [Platform References](#platform-references)
@@ -37,8 +37,8 @@ A **Single Source of Truth (SSOT)** for AI-first development knowledge.
 ```
 ssot/
 ├── README.md                          # This file - repository overview
-├── topics/                            # Core AI-first development topics
-│   ├── README.md                      # Topic directory guide
+├── files/                             # Core AI-first development files
+│   ├── README.md                      # Files directory guide
 │   ├── AGENTS.md                      # AI agent operational documentation
 │   ├── CHANGELOG.md                   # Version history format
 │   ├── PLANS.md                       # ExecPlans for complex tasks
@@ -83,7 +83,7 @@ ssot/
 ```
 
 **Design Philosophy**:
-- **`topics/`** - Core AI-first development conventions (1 topic = 1 file)
+- **`files/`** - Core AI-first development file conventions (1 topic = 1 file)
 - **`engineering/`** - Deep technical methodologies (context, prompting)
 - **`tools/`** - Cross-platform tools and communication protocols
 - **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google, LangChain)
@@ -92,9 +92,9 @@ ssot/
 
 ---
 
-## Core Topics
+## Core Files
 
-### [AGENTS.md](topics/AGENTS.md)
+### [AGENTS.md](files/AGENTS.md)
 **OpenAI AGENTS.md convention for AI-agent-friendly operational documentation**
 
 - Machine-focused operational procedures
@@ -107,7 +107,7 @@ ssot/
 
 ---
 
-### [SSOT.md](topics/SSOT.md)
+### [SSOT.md](files/SSOT.md)
 **Single Source of Truth principles for canonical documentation**
 
 - Governance patterns for authoritative documentation
@@ -120,7 +120,7 @@ ssot/
 
 ---
 
-### [SKILL.md](topics/SKILL.md)
+### [SKILL.md](files/SKILL.md)
 **Anthropic Agent Skills specification for domain expertise packaging**
 
 - Progressive disclosure model
@@ -133,7 +133,7 @@ ssot/
 
 ---
 
-### [PLANS.md](topics/PLANS.md)
+### [PLANS.md](files/PLANS.md)
 **ExecPlans workflow for documenting complex initiatives**
 
 - Document structure and format
@@ -146,7 +146,7 @@ ssot/
 
 ---
 
-### [CHANGELOG.md](topics/CHANGELOG.md)
+### [CHANGELOG.md](files/CHANGELOG.md)
 **Keep a Changelog format for version history**
 
 - Semantic versioning practices
@@ -417,8 +417,8 @@ Planned additions:
 
 ### For First-Time Readers
 
-1. **Start with [AGENTS.md](topics/AGENTS.md)** - Understand the foundational convention
-2. **Review [SSOT.md](topics/SSOT.md)** - Learn about canonical documentation
+1. **Start with [AGENTS.md](files/AGENTS.md)** - Understand the foundational convention
+2. **Review [SSOT.md](files/SSOT.md)** - Learn about canonical documentation
 3. **Check [tools/README.md](tools/README.md)** - If working with AI integration protocols
 4. **Explore [platforms/README.md](platforms/README.md)** - If integrating specific AI platforms
 5. **Consult [engineering/README.md](engineering/README.md)** - When planning context or prompt strategies
@@ -434,7 +434,7 @@ Planned additions:
 
 ### For Contributors
 
-1. **Browse [topics/](topics/)** to find relevant existing documents
+1. **Browse [files/](files/)** to find relevant existing documents
 2. **Check [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/)** for issue templates
 3. **Review [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md)** for workflow guidance
 4. **Use [_templates/](_templates/)** for consistent structure
@@ -449,13 +449,13 @@ We welcome contributions of insights, best practices, and new knowledge.
 ### Adding Information to Existing Topics
 
 1. **Identify the source** (article, documentation, research paper)
-2. **Find the relevant topic** (e.g., `topics/AGENTS.md`)
+2. **Find the relevant file** (e.g., `files/AGENTS.md`)
 3. **Open an issue** using [Topic Update template](.github/ISSUE_TEMPLATE/topic_update.md)
 4. **Or submit a PR** following the [Contributing Guide](_meta/CONTRIBUTING.md)
 
 ### Proposing New Topics
 
-1. **Verify the topic doesn't exist** in `topics/`, `engineering/`, or `platforms/`
+1. **Verify the topic doesn't exist** in `files/`, `engineering/`, or `platforms/`
 2. **Check it's substantial** (>2000 words potential)
 3. **Open an issue** using [New Topic template](.github/ISSUE_TEMPLATE/new_topic.md)
 4. **Gather initial sources** (2-3 authoritative references)
@@ -466,7 +466,7 @@ We welcome contributions of insights, best practices, and new knowledge.
 **Prompt template for adding information:**
 
 ```
-Please update topics/AGENTS.md with the following information:
+Please update files/AGENTS.md with the following information:
 
 Source: https://example.com/article
 Section: Core Patterns
@@ -492,16 +492,16 @@ See [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md) for detailed AI interaction p
 
 ### Starting a New Project
 
-1. **[AGENTS.md](topics/AGENTS.md)** - Set up operational documentation
-2. **[SSOT.md](topics/SSOT.md)** - Establish canonical definitions
-3. **[CHANGELOG.md](topics/CHANGELOG.md)** - Initialize version tracking
+1. **[AGENTS.md](files/AGENTS.md)** - Set up operational documentation
+2. **[SSOT.md](files/SSOT.md)** - Establish canonical definitions
+3. **[CHANGELOG.md](files/CHANGELOG.md)** - Initialize version tracking
 
 ### During Development
 
-- **[PLANS.md](topics/PLANS.md)** - Create ExecPlan for multi-hour tasks
-- **[SKILL.md](topics/SKILL.md)** - Package domain expertise
-- **[SSOT.md](topics/SSOT.md)** - Reference canonical definitions
-- **[AGENTS.md](topics/AGENTS.md)** - Follow testing and PR procedures
+- **[PLANS.md](files/PLANS.md)** - Create ExecPlan for multi-hour tasks
+- **[SKILL.md](files/SKILL.md)** - Package domain expertise
+- **[SSOT.md](files/SSOT.md)** - Reference canonical definitions
+- **[AGENTS.md](files/AGENTS.md)** - Follow testing and PR procedures
 - **[context.md](engineering/context.md)** - Design retrieval pipelines
 - **[prompt.md](engineering/prompt.md)** - Optimize prompts
 
@@ -514,9 +514,9 @@ See [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md) for detailed AI interaction p
 
 ### Completing Work
 
-1. **Update [CHANGELOG.md](topics/CHANGELOG.md)** - Document user-facing changes
-2. **Close [PLANS.md](topics/PLANS.md)** - Add retrospective
-3. **Update [SSOT.md](topics/SSOT.md)** - Add new canonical definitions
+1. **Update [CHANGELOG.md](files/CHANGELOG.md)** - Document user-facing changes
+2. **Close [PLANS.md](files/PLANS.md)** - Add retrospective
+3. **Update [SSOT.md](files/SSOT.md)** - Add new canonical definitions
 
 ---
 
@@ -536,12 +536,12 @@ These guides form an integrated system:
 
 **Implementing a new authentication feature:**
 
-1. **Create ExecPlan** ([PLANS.md](topics/PLANS.md)) outlining phases
-2. **Reference canonical schemas** from [SSOT.md](topics/SSOT.md)
-3. **Follow testing procedures** from [AGENTS.md](topics/AGENTS.md)
+1. **Create ExecPlan** ([PLANS.md](files/PLANS.md)) outlining phases
+2. **Reference canonical schemas** from [SSOT.md](files/SSOT.md)
+3. **Follow testing procedures** from [AGENTS.md](files/AGENTS.md)
 4. **Use prompt patterns** from [prompt.md](engineering/prompt.md) when working with AI
-5. **Package auth logic** as a Skill ([SKILL.md](topics/SKILL.md)) for reuse
-6. **Document changes** in [CHANGELOG.md](topics/CHANGELOG.md)
+5. **Package auth logic** as a Skill ([SKILL.md](files/SKILL.md)) for reuse
+6. **Document changes** in [CHANGELOG.md](files/CHANGELOG.md)
 
 ---
 
@@ -561,7 +561,7 @@ This repository includes automated quality checks:
 npx markdownlint-cli2 "**/*.md"
 
 # Check links
-npx markdown-link-check topics/*.md engineering/*.md
+npx markdown-link-check files/*.md engineering/*.md
 ```
 
 ---

@@ -10,7 +10,7 @@ assignees: ''
 
 **Topic Name**: <!-- e.g., "Observability Patterns" -->
 
-**Proposed Filename**: <!-- e.g., topics/observability.md or platforms/anthropic/claude-api.md -->
+**Proposed Filename**: <!-- e.g., files/observability.md or platforms/anthropic/claude-api.md -->
 
 ## Justification
 
@@ -59,7 +59,7 @@ assignees: ''
 
 <!-- Which existing topics relate to this? -->
 
-- `topics/RELATED.md` - How they relate
+- `files/RELATED.md` - How they relate
 - `engineering/RELATED.md` - How they relate
 
 ## Checklist
