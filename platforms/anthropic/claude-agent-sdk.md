@@ -879,13 +879,13 @@ python benchmark_tools.py --tool-count 50
 ## See Also
 
 ### Prerequisites
-- [AGENTS.md](../../topics/AGENTS.md): Operational documentation for AI agents
+- [AGENTS.md](../../files/AGENTS.md): Operational documentation for AI agents
 - [Claude Code](./claude-code.md): CLI and web interface built on this SDK
 
 ### Related Topics
 - [Context Engineering](../../engineering/context.md): Managing context in AI interactions
 - [Prompt Engineering](../../engineering/prompt.md): Effective prompt design patterns
-- [SKILL.md](../../topics/SKILL.md): Agent Skills specification
+- [SKILL.md](../../files/SKILL.md): Agent Skills specification
 
 ### Related Protocols
 - **Model Context Protocol (MCP)**: For connecting agents to external tools and services

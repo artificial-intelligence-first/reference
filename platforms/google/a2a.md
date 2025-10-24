@@ -647,11 +647,11 @@ python benchmark_discovery.py --iterations 100
 ## See Also
 
 ### Prerequisites
-- [AGENTS.md](../../topics/AGENTS.md): Operational documentation for AI agents
-- [SSOT.md](../../topics/SSOT.md): Single Source of Truth principles for canonical definitions
+- [AGENTS.md](../../files/AGENTS.md): Operational documentation for AI agents
+- [SSOT.md](../../files/SSOT.md): Single Source of Truth principles for canonical definitions
 
 ### Related Topics
-- [Orchestration patterns](../../topics/AGENTS.md#orchestration): Multi-agent coordination strategies
+- [Orchestration patterns](../../files/AGENTS.md#orchestration): Multi-agent coordination strategies
 - [Context engineering](../../engineering/context.md): Managing context in agent interactions
 
 ### Related Protocols

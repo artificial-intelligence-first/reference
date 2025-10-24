@@ -8,7 +8,7 @@ assignees: ''
 
 ## Topic to Update
 
-**File**: `topics/FILENAME.md` (or `engineering/FILENAME.md` or `platforms/VENDOR/FILENAME.md`)
+**File**: `files/FILENAME.md` (or `engineering/FILENAME.md` or `platforms/VENDOR/FILENAME.md`)
 
 ## Information Source
 

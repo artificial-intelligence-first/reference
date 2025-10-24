@@ -37,8 +37,8 @@ This directory covers:
 ## Related Directories
 
 ### Core Topics
-- [AGENTS.md](../topics/AGENTS.md): AI agent operational documentation conventions
-- [SKILL.md](../topics/SKILL.md): Anthropic Agent Skills for domain expertise packaging
+- [AGENTS.md](../files/AGENTS.md): AI agent operational documentation conventions
+- [SKILL.md](../files/SKILL.md): Anthropic Agent Skills for domain expertise packaging
 
 ### Engineering
 - [Context Engineering](../engineering/context.md): Context retrieval patterns that complement MCP resources
@@ -91,7 +91,7 @@ To propose new tools or protocols for this directory:
 5. **Follow [Contributing Guidelines](../_meta/CONTRIBUTING.md)**
 
 **Platform-specific tools** should go in `platforms/{vendor}/` instead.
-**Topic-level concepts** may belong in `topics/` instead.
+**File-level concepts** may belong in `files/` instead.
 
 ---
 

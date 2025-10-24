@@ -17,7 +17,7 @@
 
 <!-- List all markdown files changed -->
 
-- `topics/FILENAME.md`
+- `files/FILENAME.md`
 - `engineering/FILENAME.md`
 - `platforms/VENDOR/FILENAME.md`
 
@@ -25,7 +25,7 @@
 
 <!-- For each file, briefly describe the changes -->
 
-### `topics/FILENAME.md`
+### `files/FILENAME.md`
 
 - **Added**: Brief description
 - **Updated**: Brief description

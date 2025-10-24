@@ -686,8 +686,8 @@ result = chain.invoke({"input": user_query})
 
 ### Related Topics
 - **[LangGraph](./langgraph.md)** - Graph-based orchestration for complex multi-agent workflows (companion to LangChain)
-- **[AGENTS.md](../../topics/AGENTS.md)** - General agent operational documentation and conventions
-- **[SSOT.md](../../topics/SSOT.md)** - Single Source of Truth principles for canonical definitions
+- **[AGENTS.md](../../files/AGENTS.md)** - General agent operational documentation and conventions
+- **[SSOT.md](../../files/SSOT.md)** - Single Source of Truth principles for canonical definitions
 - **[Context Engineering](../../engineering/context.md)** - Best practices for RAG and retrieval systems
 - **[Prompt Engineering](../../engineering/prompt.md)** - Prompt design patterns applicable to LangChain
 
