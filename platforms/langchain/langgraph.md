@@ -11,6 +11,8 @@ sources:
   - { id: R3, title: "LangGraph Documentation", url: "https://langchain-ai.github.io/langgraph/", accessed: "2025-10-24" }
   - { id: R4, title: "LangGraph AI Framework 2025 Guide", url: "https://latenode.com/blog/langgraph-ai-framework-2025-complete-architecture-guide-multi-agent-orchestration-analysis", accessed: "2025-10-24" }
   - { id: R5, title: "AWS Prescriptive Guidance - LangGraph", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/langchain-langgraph.html", accessed: "2025-10-24" }
+  - { id: R6, title: "LangGraph Release Week Recap", url: "https://blog.langchain.com/langgraph-release-week-recap/", accessed: "2025-10-24" }
+  - { id: R7, title: "LangGraph Workflow Updates", url: "https://changelog.langchain.com/announcements/langgraph-workflow-updates-python-js", accessed: "2025-10-24" }
 ---
 
 # LangGraph
@@ -31,6 +33,7 @@ sources:
 - [Decision Checklist](#decision-checklist)
 - [Anti-patterns / Pitfalls](#anti-patterns--pitfalls)
 - [Evaluation](#evaluation)
+- [Recent Updates (2025)](#recent-updates-2025)
 - [Update Log](#update-log)
 - [See Also](#see-also)
 - [References](#references)
@@ -989,9 +992,82 @@ result = app.invoke(state, {"metadata": {"version": version}})
 
 ---
 
+## Recent Updates (2025)
+
+### LangGraph Platform General Availability [R6]
+
+The LangGraph Platform is now generally available, bringing enterprise-grade agent deployment capabilities.
+
+**Key Features**:
+- **1-Click Agent Deployment**: Deploy agents to production with minimal configuration
+- **Memory APIs**: Built-in APIs for managing agent memory across sessions
+- **Human-in-the-Loop Controls**: Native support for human approval workflows
+- **LangGraph Studio Integration**: Seamless integration with visual debugging tools
+
+**Benefits**:
+- Simplified deployment and scaling
+- Production-ready infrastructure
+- Built-in monitoring and observability
+
+**Sources**: [R6]
+
+### LangGraph Studio v2 [R6]
+
+LangGraph Studio can now run locally without a desktop app, functioning as a complete agent IDE.
+
+**New Capabilities**:
+- **Local execution**: Run Studio directly in your development environment
+- **Trace investigation**: Pull down and analyze execution traces
+- **Dataset management**: Add examples to datasets for evaluations
+- **Prompt editing**: Update prompts directly in the UI
+
+**Benefits**:
+- Faster development cycles
+- Better debugging experience
+- Integrated testing workflows
+
+**Sources**: [R6]
+
+### Workflow Enhancements (June 2025) [R7]
+
+**Node Caching**:
+- Skip redundant computation for improved performance
+- Automatically reuse results from previous executions
+- Configurable cache invalidation strategies
+
+**Deferred Nodes**:
+- Delay execution until all upstream paths complete
+- Perfect for map-reduce patterns
+- Enables collaborative agent workflows
+
+**Pre/Post Model Hooks**:
+- Add custom logic before or after model calls
+- Control context bloat
+- Insert guardrails and validation
+
+**Built-in Provider Tools**:
+- Web search integration
+- RemoteMCP support
+- Simplified external tool integration
+
+**Sources**: [R7]
+
+### Type Safety and Developer Experience [R7]
+
+**LangGraph JS v0.3 Updates**:
+- **Type-safe streaming**: `.stream()` method now fully type-safe
+- **Simplified graph building**: `.addNode()` and `.addSequence()` methods for `StateGraph`
+- **Improved error handling**: Interrupts now returned in `.invoke()` and "values" stream modes
+
+**Sources**: [R7]
+
+---
+
 ## Update Log
 
 ### 2025-10-24
+- **Added**: Recent 2025 updates: LangGraph Platform GA, Studio v2, workflow enhancements (node caching, deferred nodes, pre/post hooks), and type safety improvements
+- **Updated**: Sources with LangGraph Release Week and workflow update references
 - **Initial version**: Created comprehensive LangGraph documentation
 - **Added**: Canonical definitions for LangGraph, StateGraph, checkpoints, and human-in-the-loop
 - **Added**: Core patterns for ReAct agents, multi-agent collaboration, human-in-loop workflows, persistent workflows, and streaming

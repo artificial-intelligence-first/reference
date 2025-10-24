@@ -2,15 +2,16 @@
 title: OpenAI Agents SDK (Responses API)
 slug: openai-agents-sdk
 status: living
-last_updated: 2025-10-23
-tags: [openai, agents, sdk, responses-api, tool-calling]
+last_updated: 2025-10-24
+tags: [openai, agents, sdk, responses-api, tool-calling, mcp]
 summary: "Hands-on patterns for building agents with OpenAI SDKs using Responses API and tool calling."
 sources:
-  - { id: R1, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-23" }
-  - { id: R2, title: "OpenAI Function Calling Guide", url: "https://platform.openai.com/docs/guides/function-calling", accessed: "2025-10-23" }
-  - { id: R3, title: "openai-python - Official Python SDK", url: "https://github.com/openai/openai-python", accessed: "2025-10-23" }
-  - { id: R4, title: "openai-node - Official Node.js SDK", url: "https://github.com/openai/openai-node", accessed: "2025-10-23" }
-  - { id: R5, title: "OpenAI Streaming Guide", url: "https://platform.openai.com/docs/guides/streaming", accessed: "2025-10-23" }
+  - { id: R1, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-24" }
+  - { id: R2, title: "OpenAI Function Calling Guide", url: "https://platform.openai.com/docs/guides/function-calling", accessed: "2025-10-24" }
+  - { id: R3, title: "openai-python - Official Python SDK", url: "https://github.com/openai/openai-python", accessed: "2025-10-24" }
+  - { id: R4, title: "openai-node - Official Node.js SDK", url: "https://github.com/openai/openai-node", accessed: "2025-10-24" }
+  - { id: R5, title: "OpenAI Streaming Guide", url: "https://platform.openai.com/docs/guides/streaming", accessed: "2025-10-24" }
+  - { id: R6, title: "New tools and features in the Responses API", url: "https://openai.com/index/new-tools-and-features-in-the-responses-api/", accessed: "2025-10-24" }
 ---
 
 # OpenAI Agents SDK (Responses API)
@@ -275,7 +276,144 @@ Document any incidents in PLANS.md under “Surprises & Discoveries”.
 
 ---
 
-## 8. Resources (2025-10-20)
+## 8. Advanced Features (May 2025 Updates)
+
+### 8.1 Model Context Protocol (MCP) Support [R6]
+
+The Responses API now supports remote MCP servers, enabling agents to connect to external tools and services with minimal configuration.
+
+**Supported MCP Services**:
+- Stripe (payment processing)
+- Shopify (e-commerce)
+- Twilio (communications)
+- Custom MCP servers
+
+**Example**:
+```python
+# Connect to remote MCP server
+response = client.responses.create(
+    model="gpt-4.1",
+    input=[{"role": "user", "content": "Process a payment for $50"}],
+    mcp_servers=[
+        {
+            "type": "remote",
+            "url": "https://api.example.com/mcp/stripe",
+            "api_key": "your-api-key"
+        }
+    ]
+)
+```
+
+**Key Benefits**:
+- Seamless integration with external services
+- Standardized tool interface via MCP protocol
+- Reduced custom integration code
+
+### 8.2 Native Image Generation
+
+GPT-4o can now generate images directly within the Responses API using the `gpt-image-1` model.
+
+**Features**:
+- Real-time streaming previews
+- Multi-turn refinement
+- Direct integration in agent workflows
+
+**Example**:
+```python
+response = client.responses.create(
+    model="gpt-image-1",
+    input=[{
+        "role": "user",
+        "content": "Generate a professional logo for a tech startup"
+    }],
+    stream=True
+)
+
+# Stream preview updates
+for event in response:
+    if event.type == "image.preview":
+        display_preview(event.preview_url)
+    elif event.type == "image.final":
+        save_image(event.image_url)
+```
+
+### 8.3 Code Interpreter Integration
+
+The Code Interpreter tool is now built into the Responses API, enabling models to handle data analysis, complex math, and logic-based tasks.
+
+**Capabilities**:
+- Execute Python code
+- Data analysis and visualization
+- Complex mathematical computations
+- File processing
+
+**Example**:
+```python
+response = client.responses.create(
+    model="gpt-4.1",
+    input=[{
+        "role": "user",
+        "content": "Analyze this CSV data and create a visualization"
+    }],
+    tools=[
+        {"type": "code_interpreter"}
+    ],
+    files=["data.csv"]
+)
+```
+
+### 8.4 Enhanced File Search
+
+File search capabilities have been upgraded with:
+- Multi-vector store searches
+- Array-based attribute filtering
+- Improved relevance ranking
+
+**Example**:
+```python
+response = client.responses.create(
+    model="gpt-4.1",
+    input=[{"role": "user", "content": "Find all Q4 financial reports"}],
+    tools=[{
+        "type": "file_search",
+        "vector_stores": ["store-1", "store-2"],
+        "filters": {
+            "quarter": ["Q4"],
+            "year": [2024, 2025]
+        }
+    }]
+)
+```
+
+### 8.5 Reasoning Models (o3, o4-mini)
+
+The o-series reasoning models now support tool calling and function execution within their chain-of-thought process.
+
+**Key Features**:
+- Tools called directly within reasoning
+- Preserved reasoning tokens across requests
+- More contextually relevant answers
+
+**Example**:
+```python
+response = client.responses.create(
+    model="o4-mini",
+    input=[{
+        "role": "user",
+        "content": "Research the latest AI safety guidelines and summarize"
+    }],
+    tools=TOOLS,
+    temperature=1.0  # Reasoning models benefit from temperature=1
+)
+```
+
+**Available Models**:
+- `o3`: Most capable reasoning model
+- `o4-mini`: Efficient reasoning for common tasks
+
+---
+
+## 9. Resources (2025-10-24)
 
 - [OpenAI Responses API](https://platform.openai.com/docs/guides/responses)
 - [Tool Calling Guide](https://platform.openai.com/docs/guides/function-calling)
@@ -285,7 +423,7 @@ Document any incidents in PLANS.md under “Surprises & Discoveries”.
 
 ---
 
-## 9. Adoption Checklist
+## 10. Adoption Checklist
 
 - [ ] Install/update OpenAI SDKs; run health checks.
 - [ ] Define storage strategy for conversation history and tool outputs.
@@ -299,8 +437,9 @@ Document any incidents in PLANS.md under “Surprises & Discoveries”.
 
 ---
 
-## 10. Update Log
+## 11. Update Log
 
+- 2025-10-24: Added May 2025 features: MCP support, native image generation (gpt-image-1), Code Interpreter integration, enhanced file search, and o-series reasoning models (o3, o4-mini).
 - 2025-10-23: Added official OpenAI documentation references for Responses API, Function Calling, SDKs, and Streaming.
 - 2025-10-20: Rebuilt guide around the Responses API, updated code samples for `openai` SDK ≥ 1.50, and aligned reliability/safety recommendations with repository conventions.
 
