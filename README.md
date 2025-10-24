@@ -56,8 +56,11 @@ ssot/
 │   ├── anthropic/                     # Anthropic-specific guides
 │   │   ├── claude-code.md             # Claude Code agentic tool
 │   │   └── claude-agent-sdk.md        # Claude Agent SDK
-│   └── google/                        # Google-specific guides
-│       └── a2a.md                     # Agent2Agent protocol
+│   ├── google/                        # Google-specific guides
+│   │   └── a2a.md                     # Agent2Agent protocol
+│   └── langchain/                     # LangChain-specific guides
+│       ├── langchain.md               # LangChain framework
+│       └── langgraph.md               # LangGraph orchestration
 ├── _meta/                             # Governance & style guides
 │   ├── CONTRIBUTING.md                # How to add/update content
 │   ├── STYLE.md                       # Writing conventions
@@ -78,7 +81,7 @@ ssot/
 **Design Philosophy**:
 - **`topics/`** - Core AI-first development conventions (1 topic = 1 file)
 - **`engineering/`** - Deep technical methodologies (context, prompting)
-- **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google)
+- **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google, LangChain)
 - **`_meta/`** - How to maintain this repository
 - **`_templates/`** - Scaffolding for new content
 
@@ -279,6 +282,42 @@ ssot/
 **Use when**: Building multi-agent systems, enabling cross-framework agent communication, implementing agent discovery and task delegation.
 
 **Industry Support**: Hosted by Linux Foundation with support from 50+ companies including AWS, Microsoft, Google, Salesforce, SAP, and ServiceNow.
+
+---
+
+## LangChain
+
+### [LangChain](platforms/langchain/langchain.md)
+**Open-source framework for building LLM-powered applications**
+
+- Modular architecture with chains, agents, and memory
+- Extensive integrations with LLM providers and vector databases
+- Retrieval-Augmented Generation (RAG) patterns
+- LCEL (LangChain Expression Language) for declarative workflows
+- LangServe for API deployment
+- LangSmith for observability and evaluation
+- Python and JavaScript/TypeScript support
+
+**Use when**: Building chatbots, document analysis systems, RAG applications, conversational agents with memory, or any LLM-powered workflow requiring structured composition.
+
+**Ecosystem**: Used by companies including Replit, Clay, Rippling, Cloudflare, and Workday.
+
+---
+
+### [LangGraph](platforms/langchain/langgraph.md)
+**Graph-based orchestration for stateful multi-agent workflows**
+
+- Directed graph architecture for complex agent orchestration
+- Built-in state management and persistence (checkpoints)
+- Human-in-the-loop workflows with pause/resume capability
+- Time-travel debugging for exploring alternative execution paths
+- Streaming real-time updates
+- LangGraph Studio for visual debugging
+- Multi-agent coordination with conditional branching
+
+**Use when**: Building multi-agent systems, workflows requiring conditional logic or parallel execution, agents needing human approval, long-running tasks that pause/resume, or applications requiring state persistence.
+
+**Deployment**: LangGraph Cloud (managed), self-hosted, or VPC deployment options.
 
 ---
 
