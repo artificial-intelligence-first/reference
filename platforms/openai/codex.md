@@ -2,14 +2,15 @@
 title: OpenAI Code Generation Guide (Post-Codex)
 slug: openai-code-generation
 status: living
-last_updated: 2025-10-23
-tags: [openai, code-generation, codex, gpt-4, responses-api]
+last_updated: 2025-10-25
+tags: [openai, code-generation, codex, gpt-4, responses-api, github-actions, ci-cd]
 summary: "Modern code-assistance patterns using OpenAI Responses API after Codex deprecation."
 sources:
   - { id: R1, title: "OpenAI Models Documentation", url: "https://platform.openai.com/docs/models", accessed: "2025-10-23" }
   - { id: R2, title: "OpenAI Responses API Guide", url: "https://platform.openai.com/docs/guides/responses", accessed: "2025-10-23" }
   - { id: R3, title: "OpenAI Completions API (Legacy)", url: "https://platform.openai.com/docs/guides/completions", accessed: "2025-10-23" }
   - { id: R4, title: "OpenAI Deprecations", url: "https://platform.openai.com/docs/deprecations", accessed: "2025-10-23" }
+  - { id: R5, title: "OpenAI Codex GitHub Action", url: "https://github.com/openai/codex-action", accessed: "2025-10-25" }
 ---
 
 # OpenAI Code Generation Guide (Post-Codex)
@@ -185,7 +186,172 @@ Sample prompt template:
 
 ---
 
-## 7. Troubleshooting
+## 7. GitHub Actions Integration
+
+OpenAI provides an official Codex GitHub Action for automating code-assistance workflows in CI/CD pipelines [R5].
+
+### Overview
+
+The `openai/codex-action` enables running Codex within GitHub Actions workflows while maintaining strict privilege controls. The action installs the Codex CLI and establishes a secure proxy connection to the Responses API.
+
+**Primary Use Cases:**
+- Automated code review on pull requests
+- Documentation generation
+- Test generation
+- Security and compliance scanning
+- Refactoring suggestions
+
+### Key Features
+
+| Feature | Description |
+|---------|-------------|
+| Secure API Integration | Configures proxy to Responses API using GitHub Secrets |
+| Privilege Control | Multiple safety strategies limit Codex access to system resources |
+| Flexible Prompts | Supports inline prompts or file-based task descriptions |
+| Output Handling | Captures responses and optionally writes to files |
+| Cross-Platform | Supports Linux, macOS, and Windows runners |
+
+### Configuration Inputs
+
+```yaml
+- uses: openai/codex-action@v1
+  with:
+    openai-api-key: ${{ secrets.OPENAI_API_KEY }}  # Required
+    prompt: "Review this code for security issues"  # Inline prompt
+    prompt-file: ".github/prompts/review.md"       # Or file-based prompt
+    output-file: "review-results.md"               # Optional output destination
+    working-directory: "src/"                       # Execution context
+    sandbox: "workspace-write"                      # Permission level
+    model: "gpt-4.1"                               # LLM selection
+    safety-strategy: "drop-sudo"                   # Privilege restriction
+```
+
+### Safety Strategies
+
+Four privilege models are available:
+
+| Strategy | Description | Recommended For |
+|----------|-------------|-----------------|
+| `drop-sudo` (default) | Removes superuser capabilities on Unix systems | Linux, macOS runners |
+| `unprivileged-user` | Runs Codex as designated non-admin account | High-security environments |
+| `read-only` | Restricts filesystem modifications | Analysis-only workflows |
+| `unsafe` | No privilege restrictions | Windows runners only |
+
+### Example Workflow: Automated Code Review
+
+```yaml
+name: Codex Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # Fetch full history for diff context
+
+      - name: Run Codex Review
+        id: codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt: |
+            Review the changes in this pull request for:
+            - Security vulnerabilities
+            - Performance issues
+            - Code style consistency
+            - Potential bugs
+
+            Provide specific line-by-line feedback.
+          output-file: "codex-review.md"
+          sandbox: "read-only"
+          model: "gpt-4.1"
+
+      - name: Post Review Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const review = fs.readFileSync('codex-review.md', 'utf8');
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## Codex Code Review\n\n${review}`
+            });
+```
+
+### Security Considerations
+
+- **API Key Protection**: Always store OpenAI API keys in GitHub Secrets, never in workflow files
+- **Sandbox Restrictions**: Use `read-only` or `drop-sudo` for untrusted code analysis
+- **Output Redaction**: Post-process Codex outputs to remove accidental credential leaks
+- **Audit Logging**: GitHub Actions automatically logs all workflow executions with full traceability
+- **Branch Protection**: Restrict Codex workflows to specific branches or require manual approval
+
+### Advanced Usage
+
+**Custom CLI Arguments:**
+```yaml
+- uses: openai/codex-action@v1
+  with:
+    openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+    codex-args: "--verbose --timeout=300"
+```
+
+**Structured Output with JSON Schema:**
+```yaml
+- uses: openai/codex-action@v1
+  with:
+    openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+    prompt: "Generate test cases"
+    json-schema: |
+      {
+        "type": "object",
+        "properties": {
+          "tests": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+```
+
+**Accessing Output in Downstream Steps:**
+```yaml
+- name: Process Codex Response
+  run: |
+    echo "Codex said: ${{ steps.codex.outputs.final-message }}"
+```
+
+### Integration with AGENTS.md
+
+Document Codex GitHub Action commands in your project's `AGENTS.md`:
+
+```markdown
+## CI/CD Workflows
+
+### Automated Code Review
+Codex automatically reviews pull requests for security and style issues.
+
+**Trigger**: Pull requests to `main` or `develop`
+**Action**: `.github/workflows/codex-review.yml`
+**Safety**: Runs in `read-only` sandbox mode
+**Model**: `gpt-4.1` for higher reasoning quality
+
+**Manual Trigger**:
+```bash
+gh workflow run codex-review.yml -f pr_number=123
+```
+```
+
+---
+
+## 8. Troubleshooting
 
 | Issue | Likely Cause | Mitigation |
 |-------|--------------|------------|
@@ -220,7 +386,7 @@ If you still support legacy integrations:
 
 ---
 
-## 9. Integration with Repository Docs
+## 10. Integration with Repository Docs
 
 - **AGENTS.md** – include commands for running code-generation regression tests and linting AI-generated code.
 - **SSOT.md** – store approved models, temperature ranges, and review policies.
@@ -229,8 +395,9 @@ If you still support legacy integrations:
 
 ---
 
-## 10. Update Log
+## 11. Update Log
 
+- 2025-10-25: **Added**: GitHub Actions Integration section with openai/codex-action documentation, including configuration options, safety strategies, automated code review workflow example, and AGENTS.md integration guidance [R5].
 - 2025-10-23: Added official OpenAI documentation references for Models, Responses API, legacy Completions API, and Deprecations.
 - 2025-10-20: Replaced Codex examples with Responses API patterns, added legacy deprecation notice, and refreshed performance/safety guidance.
 
