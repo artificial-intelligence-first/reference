@@ -254,7 +254,7 @@ When filing a bug report, include:
 
 Use [Conventional Commits](https://www.conventionalcommits.org/):
 
-```
+```text
 <type>(<scope>): <description>
 
 [optional body]
