@@ -1,14 +1,3 @@
----
-title: AI-First Development Reference
-slug: readme
-status: living
-last_updated: 2025-11-01
-tags: [ai-first, documentation, ssot]
-summary: "Single Source of Truth repository for AI-first development patterns, conventions, and best practices."
-authors: []
-sources: []
----
-
 # AI-First Development Reference
 
 [![Link Check](https://github.com/artificial-intelligence-first/ssot/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/artificial-intelligence-first/ssot/actions/workflows/linkcheck.yml)
