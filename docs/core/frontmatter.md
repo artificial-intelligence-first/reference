@@ -211,7 +211,7 @@ tags: [concept-context, impl-python, platform-openai]
 ### Tab Characters
 ❌ **Wrong**: Using tabs for indentation
 ```yaml
-title:	"Document"  # Tab character
+# title:<TAB>"Document"  # Tab character (not allowed)
 ```
 ✅ **Right**: Using spaces
 ```yaml

@@ -220,5 +220,4 @@ This repository synthesizes best practices from:
 ## Contact
 
 - **Issues**: [GitHub Issues](https://github.com/artificial-intelligence-first/ssot/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/artificial-intelligence-first/ssot/discussions)
-- **Contributing**: See [CONTRIBUTING.md](./_meta/CONTRIBUTING.md)
+- **Contributing**: See [CONTRIBUTING.md](./docs/governance/contributing.md)
