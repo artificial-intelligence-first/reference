@@ -6,13 +6,14 @@
 
 ## Overview
 
-The `files/` directory contains five core specifications that govern AI-first development projects:
+The `files/` directory contains six core specifications that govern AI-first development projects:
 
 1. **AGENTS.md** – Operational procedures and commands for contributors and AI agents.
 2. **CHANGELOG.md** – Keep a Changelog format reference for communicating releases.
-3. **PLANS.md** – ExecPlan workflow for multi-step initiatives.
-4. **SKILL.md** – Anthropic-style Skill packaging guidelines.
-5. **SSOT.md** – Single Source of Truth principles for canonical data and policies.
+3. **Frontmatter.md** – YAML frontmatter specification for Markdown metadata.
+4. **PLANS.md** – ExecPlan workflow for multi-step initiatives.
+5. **SKILL.md** – Anthropic-style Skill packaging guidelines.
+6. **SSOT.md** – Single Source of Truth principles for canonical data and policies.
 
 These documents are authoritative references and should be kept consistent with the repository root `README.md`.
 
@@ -20,8 +21,9 @@ These documents are authoritative references and should be kept consistent with 
 
 | Document | Use When… | Typical Updates |
 |----------|-----------|-----------------|
-| `AGENTS.md` | You need to define “how to work” (setup, tests, PR rules, safety practices). | Update whenever workflows, scripts, or CI expectations change. |
-| `CHANGELOG.md` | You document “what changed” for releases. | Update alongside user-facing changes or before tagging a release. |
+| `AGENTS.md` | You need to define "how to work" (setup, tests, PR rules, safety practices). | Update whenever workflows, scripts, or CI expectations change. |
+| `CHANGELOG.md` | You document "what changed" for releases. | Update alongside user-facing changes or before tagging a release. |
+| `Frontmatter.md` | You need to understand or validate YAML frontmatter in Markdown files. | Update when new platforms, fields, or patterns emerge. |
 | `PLANS.md` | You run complex, multi-hour projects that require resumable context. | Update continuously while executing an ExecPlan. |
 | `SKILL.md` | You package domain expertise for AI agents. | Update when adding or modifying Skills. |
 | `SSOT.md` | You define canonical terminology, schemas, or policies. | Update whenever the authoritative source of truth changes. |
