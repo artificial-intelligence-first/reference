@@ -35,6 +35,7 @@ jobs:
             "engineering/**/*.md"
             "platforms/**/*.md"
             "tools/**/*.md"
+            "system/**/*.md"
             "_meta/**/*.md"
             "_templates/**/*.md"
             "README.md"
