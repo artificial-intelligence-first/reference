@@ -168,8 +168,8 @@ custom_data:
 
 **Key Principles**:
 - **Consistent indentation**: Each nesting level uses the same number of spaces [R1]
-- **Array syntax**: Use hyphen-space (`- `) for list items or bracket notation `[item1, item2]` [R1]
-- **Object notation**: Use key-value pairs with colon-space (`: `) separation [R1]
+- **Array syntax**: Use hyphen followed by space (`-`) for list items or bracket notation `[item1, item2]` [R1]
+- **Object notation**: Use key-value pairs with colon followed by space (`:`) separation [R1]
 - **Type inference**: YAML automatically detects strings, numbers, booleans, and null values [R1]
 
 **Trade-offs**:
