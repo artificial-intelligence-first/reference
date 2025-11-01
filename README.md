@@ -66,7 +66,7 @@ ssot/
 │   └── langchain/                     # LangChain-specific guides
 │       ├── langchain.md               # LangChain framework
 │       └── langgraph.md               # LangGraph orchestration
-├── system/                            # System tools & utilities
+├── systems/                           # System tools & utilities
 │   ├── README.md                      # System tools overview
 │   └── git/                           # Git version control
 │       └── worktree.md                # Git worktree patterns
@@ -92,7 +92,7 @@ ssot/
 - **`engineering/`** - Deep technical methodologies (context, prompting)
 - **`tools/`** - Cross-platform tools and communication protocols
 - **`platforms/`** - Vendor-specific implementations (OpenAI, Anthropic, Google, LangChain)
-- **`system/`** - System tools and utilities (Git, Docker, build tools)
+- **`systems/`** - System tools and utilities (Git, Docker, build tools)
 - **`_meta/`** - How to maintain this repository
 - **`_templates/`** - Scaffolding for new content
 
@@ -381,7 +381,7 @@ Planned additions:
 
 ### Git
 
-#### [Git Worktree](system/git/worktree.md)
+#### [Git Worktree](systems/git/worktree.md)
 **Managing multiple working trees for simultaneous branch work**
 
 - Multiple working trees from single repository
@@ -404,11 +404,11 @@ Planned additions:
 ### Future System Tools
 
 Planned additions:
-- **`system/git/hooks.md`** - Git hooks for automation and validation
-- **`system/git/submodules.md`** - Submodule management patterns
-- **`system/docker/`** - Container-based development environments
-- **`system/shell/`** - Shell scripting patterns
-- **`system/ci-cd/`** - CI/CD integration patterns
+- **`systems/git/hooks.md`** - Git hooks for automation and validation
+- **`systems/git/submodules.md`** - Submodule management patterns
+- **`systems/docker/`** - Container-based development environments
+- **`systems/shell/`** - Shell scripting patterns
+- **`systems/ci-cd/`** - CI/CD integration patterns
 
 ---
 
@@ -462,7 +462,7 @@ Planned additions:
 2. **Review [SSOT.md](files/SSOT.md)** - Learn about canonical documentation
 3. **Check [tools/README.md](tools/README.md)** - If working with AI integration protocols
 4. **Explore [platforms/README.md](platforms/README.md)** - If integrating specific AI platforms
-5. **Browse [system/README.md](system/README.md)** - If working with Git, Docker, or system tools
+5. **Browse [systems/README.md](systems/README.md)** - If working with Git, Docker, or system tools
 6. **Consult [engineering/README.md](engineering/README.md)** - When planning context or prompt strategies
 7. **Read [_meta/CONTRIBUTING.md](_meta/CONTRIBUTING.md)** - If you plan to contribute
 
